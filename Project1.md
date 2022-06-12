@@ -1,6 +1,8 @@
-##LAMP Stack is an example of WEB Stack Technology, which is a set of frameworks and tools used to develop a well-functioning software product.
+## WEB STACK IMPLEMENTATION (LAMP STACK) IN AWS
 
-•	###LAMP (Linux, Apache, MySQL, PHP or Python, or Perl)
+### LAMP Stack is an example of WEB Stack Technology, which is a set of frameworks and tools used to develop a well-functioning software product.
+
+•	### LAMP (Linux, Apache, MySQL, PHP or Python, or Perl)
 
 
 STEP 1
@@ -9,10 +11,10 @@ STEP 1
    I created a new key pair for my instance and click on connect to copy my generated SSH client
 
 Platform :
-    Ubuntu	Subnet ID
+    Ubuntu 22.04 version
 
 Platform details:
-    Linux/UNIX	Network interfaces
+    Linux/UNIX	
 
 
 	
@@ -30,17 +32,19 @@ from my terminal to create my Linux server in the cloud.
 
 
 
-
+---------------------------------------------------------------------------------------------------------------------------
 
  
-Installing Apache and Updating my firewall
+## Installing Apache and Updating my firewall
 
-   Apache is an open source HTTP server which is a widely used server software. Apache can be customised to meet the needs of different environments by using extensions and modules.
+   ### Apache is an open source HTTP server which is a widely used server software. Apache can be customised to meet the needs of different environments by using extensions and modules.
    
 
-    STEP 1
-          I installed apache on my Ubuntu terminal by typing
-            sudo apt install apache2
+   STEP 1
+           I installed apache on my Ubuntu terminal by typing
+                 sudo apt install apache2
+![apache install](https://user-images.githubusercontent.com/79808404/173253804-a56076c5-ff20-4100-bad5-3b1a6a9fe79a.PNG)
+
      
    and I verified that the package is installed and running by typing
                    sudo systemctl status apache2
@@ -52,6 +56,7 @@ Installing Apache and Updating my firewall
                  or
            curl http://127.0.0.1:80
 
+![Http port80 verification](https://user-images.githubusercontent.com/79808404/173253826-5cd3e6aa-68a7-4404-8f63-95b1507244c1.PNG)
 
   
 STEP 3
@@ -61,15 +66,16 @@ STEP 3
              
   in my web browser and shows “apache2 ubuntu default page” which is a confirmation that my server is working correctly.
 
+![Apache confirmation](https://user-images.githubusercontent.com/79808404/173253841-7e433323-c815-4088-84b2-f80457ae7107.PNG)
 
 
 
+----------------------------------------------------------------------------
 
 
+## INSTALLING MYSQL
 
-INSTALLING MYSQL
-
-MySQL is a relational database which is used to store and manage data for websites
+### MySQL is a relational database which is used to store and manage data for websites
 
 STEP 1
 
@@ -102,9 +108,9 @@ to test if I can log in to MySql console.
 
   --------------------------------------------------------------------
 
-Installing PHP
+## Installing PHP
 
-   PHP is a component that process code to display dynamic content to the end user.
+   ### PHP is a component that process code to display dynamic content to the end user.
 
 STEP 1
     I Installed a php module that will allow my PHP to communicate with Mysql database by running 
@@ -120,14 +126,17 @@ To install all the packages at once run the command in the terminal
 after the installation is completed I ran 
        php –v
 to check the version installed.
+![php version](https://user-images.githubusercontent.com/79808404/173253939-a71bbdb5-7acf-4234-9335-834163b504d8.PNG)
+
 
 
 ------------------------------------------------------------------------------------------------
- Creating a Virtual Host For Your Website using Apache
+ ## Creating a Virtual Host For Your Website using Apache
 
 STEP 1
   I created a directory and named it projectlamp by running
         “Sudo mkdir /var/www/projectlamp”
+	
 I assigned ownership of the directory with my current system user by running
         “Sudo chown –R $USER:$USER /var/www/projectlamp”
 I create a new blank file in Apache’s site-available directory by running
@@ -157,8 +166,8 @@ STEP 4
       sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectlamp/index.html
 I opened my web browser to check if the website is working as expected by running “http:// my public ip address :80” 
   
-
-  ENABLE PHP ON THE WEBSITE
+------------------------------------------------------------------------------------
+  ## ENABLE PHP ON THE WEBSITE
 
 STEP 1
   I ran 
