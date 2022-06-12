@@ -1,6 +1,6 @@
-LAMP Stack is an example of WEB Stack Technology, which is a set of frameworks and tools used to develop a well-functioning software product.
+##LAMP Stack is an example of WEB Stack Technology, which is a set of frameworks and tools used to develop a well-functioning software product.
 
-•	LAMP (Linux, Apache, MySQL, PHP or Python, or Perl)
+•	###LAMP (Linux, Apache, MySQL, PHP or Python, or Perl)
 
 
 STEP 1
@@ -182,4 +182,7 @@ and I inserted
 in the blanked page opened and saved the file.
 
 Then I refreshed the web browser to see that my PHP is working correctly.
+
+
+![Php screengrab](https://user-images.githubusercontent.com/79808404/173246947-47243ff1-f773-420a-9efb-0a3a55439a22.PNG)
 
