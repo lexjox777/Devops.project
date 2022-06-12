@@ -264,33 +264,46 @@ STEP 8..
 
  and paste  the below script into my todo_list.php
 
-<?php
-$user = "user1";
-$password = "new_password";
-$database = "my_database";
-$table = "todo_list";
+        <?php
+        $user = "user1";
+        $password = "new_password";
+        $database = "my_database";
+        $table = "todo_list";
 
-try {
-$db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-echo "<h2>TODO</h2><ol>";
-foreach($db->query("SELECT content FROM $table") as $row) {
-echo "<li>" . $row['content'] . "</li>";
-}
-echo "</ol>";
-} catch (PDOException $e) {
-print "Error!: " . $e->getMessage() . "<br/>";
-die();
+        try {
+        $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+        echo "<h2>TODO</h2><ol>";
+        foreach($db->query("SELECT content FROM $table") as $row) {
+        echo "<li>" . $row['content'] . "</li>";
+        }
+        echo "</ol>";
+        } catch (PDOException $e) {
+        print "Error!: " . $e->getMessage() . "<br/>";
+        die();
+        }
 
-}
-I saved the file and input   http://<my_domain>/todo_list.php on my web browser to view the content in my database to confirm that my PHP environment is ready and it’s interacting with MySQL server.
+ I saved the file and input   "http: //<my_domain>/todo_list.php"  on my web browser to view the content in my database to confirm that my PHP environment 
+is ready and it’s interacting with MySQL server.
 
- ![mysql php final image](https://user-images.githubusercontent.com/79808404/173252491-8fc66896-f3c2-4832-bfe2-4aa971a6bc4f.PNG)
+![mysql php final image](https://user-images.githubusercontent.com/79808404/173252491-8fc66896-f3c2-4832-bfe2-4aa971a6bc4f.PNG)
 
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
   
 
-  
 
+ ## Challenges.
+ 
+When i was trying to access MySQL console root by running "sudo mysql" I came accross the below error;
+
+![error 1](https://user-images.githubusercontent.com/79808404/173253116-d465850f-4954-49b7-a101-251a75950c76.PNG)
+
+
+## Solution
+
+After spending couple of minutes trying to figure out what the issue might be, i checked on Google and found a solution by running "sudo mysql -uroot -p" to access the root console of my database.
+ 
+
+![solution to error 1](https://user-images.githubusercontent.com/79808404/173253247-ed6b3b0c-b05d-4bab-894f-73bf0972d3c0.PNG)
 
 
 
