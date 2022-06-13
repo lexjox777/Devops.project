@@ -15,16 +15,17 @@ Platform :
 Platform details:
                Linux/UNIX
 
-STEP 2.. 
-   I opened my Ubuntu terminal and ran “sudo apt update” and “sudo apt upgrade” 
-to update and upgrade each out-dated dependencies and packages on my system..
 
-STEP 3... 
-   I connected to my instance by running 
+STEP 2... 
+   I connected to my instance from my Ubuntu terminal by running 
 
     “ ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>”
  
 from my terminal to create my Linux server in the cloud.
+
+STEP 3.. 
+   I ran “sudo apt update” and “sudo apt upgrade” in Ubuntu terminal
+to update and upgrade each out-dated dependencies and packages on my system..
 
 -------------------------------------------------------------------------------------------------------------------
 
