@@ -619,9 +619,10 @@ and entered the code below
 
 
 ## CHALLENGES ENCOUNTERED
- When i ran node index.js to see if database is connected and running on port 5000 as configured but i got the below error instead
+ When i ran node index.js to see if my database is connected and running on port 5000 as configured but I got the below error instead.
  ![error 1](https://user-images.githubusercontent.com/79808404/174457830-a0de07ac-908f-4026-80f3-77b8571a8ed0.PNG)
 
 ## SOLUTION
- After spending couple of hours trying to debug what might have caused the error, i checked on slack overflow and got a hint that the error was becaused i've included a special character in database password.
+ After spending couple of hours trying to debug what might have caused the error, I checked on slack overflow and got a hint that the error was becaused I've included a special character in database password. So I changed my database password and my App was able to connect succesfully.
+ 
 ![database connectd](https://user-images.githubusercontent.com/79808404/174457968-f2560a2f-baad-4a9f-b0bb-8948c1c99dab.PNG)
