@@ -37,6 +37,7 @@ To get location of Node.js from my Ubuntu repo
 #### STEP 2
   I installed Node.js and npm on my server with the command below
           "sudo apt-get install -y nodejs"
+	  
    ![nodejs install](https://user-images.githubusercontent.com/79808404/174454881-5e7d39ee-7f3c-4791-bf75-8a30c7e3f91a.PNG)
 
 
@@ -44,11 +45,13 @@ To get location of Node.js from my Ubuntu repo
   I checked the version of the node and npm installed to be sure they are installed as expected by running 
     node -v 
     npm -v 
+    
 ![node version](https://user-images.githubusercontent.com/79808404/174454928-1600c68f-155b-4ad0-9d7e-a84577169566.PNG)
 
   #### STEP 4
      I created a Todo directory and cd into it with the command
    " mkdir Todo" and   "cd Todo"
+   
 ![make todo dir and cd](https://user-images.githubusercontent.com/79808404/174454957-246f5b97-a528-436b-a887-0134cc78dc2b.PNG)
 
 #### STEP 5
@@ -65,7 +68,8 @@ To get location of Node.js from my Ubuntu repo
  #### STEP 1 
   I installed express in my server by running 
         "npm install express"
-    ![npm install express](https://user-images.githubusercontent.com/79808404/174455177-444d23ce-dd20-4239-8569-a3fb31e842b4.PNG)
+	
+  ![npm install express](https://user-images.githubusercontent.com/79808404/174455177-444d23ce-dd20-4239-8569-a3fb31e842b4.PNG)
 
 
 #### STEP 2
@@ -76,7 +80,8 @@ To get location of Node.js from my Ubuntu repo
 #### STEP 3
   I installed dotenv module by running
     "npm install dotenv"
-    ![install dotenv](https://user-images.githubusercontent.com/79808404/174455207-4b4cbe3d-6dcd-4f08-bd87-d81bdb57de22.PNG)
+    
+  ![install dotenv](https://user-images.githubusercontent.com/79808404/174455207-4b4cbe3d-6dcd-4f08-bd87-d81bdb57de22.PNG)
 
 
   #### STEP 4
@@ -112,7 +117,8 @@ Then I click the “esc” button and use “:w” to save the file and “:qa�
 #### STEP 5
    I checked if my server is running on port 5000 as expected by running
         " node index.js"
-   ![indexjs on port 5000](https://user-images.githubusercontent.com/79808404/174455336-9ab1c1a0-a32f-4039-871c-3e4433a3c412.PNG)
+	
+  ![indexjs on port 5000](https://user-images.githubusercontent.com/79808404/174455336-9ab1c1a0-a32f-4039-871c-3e4433a3c412.PNG)
 
 
 #### STEP 6  
@@ -127,6 +133,7 @@ Then I typed http://<my_PublicIP>:5000  into my web browser to confirm if my ser
 #### Step 1
    I changed my directory back to my Todo directory with cd.. and I installed MongoDB as my database by running
         "sudo npm install mongoose"
+	
  ![npm install mongoose](https://user-images.githubusercontent.com/79808404/174455623-08b651a0-39b5-45a8-b53a-44bb30dda3f1.PNG)
 
 #### STEP 2
@@ -206,6 +213,7 @@ I clicked on cluster then navigate to collections where I clicked on “Add my O
 #### STEP 2
 I cd into my Todo directory and I created a .env file in my Todo directory by running
                          "touch .env"
+			 
  ![create a env file](https://user-images.githubusercontent.com/79808404/174456240-804951d7-0f12-4582-aa8c-5488b1537481.PNG)
 
                           
@@ -215,7 +223,8 @@ I cd into my Todo directory and I created a .env file in my Todo directory by ru
 
 #### STEP 3
   I opened  my MongoDB database and navigate to Database deployments and I clicked on connect to connect my application to my database by copying the generated link
-  ![database cont to cluster](https://user-images.githubusercontent.com/79808404/174456272-339b5054-5184-4943-a2b5-98a031018618.PNG)
+ 
+ ![database cont to cluster](https://user-images.githubusercontent.com/79808404/174456272-339b5054-5184-4943-a2b5-98a031018618.PNG)
 
 #### STEP 4
  I opened my index.js file and by typing "Vim index.js" and input the code below and save and exit the file.
@@ -261,6 +270,7 @@ I cd into my Todo directory and I created a .env file in my Todo directory by ru
 #### STEP 5
    I started my server by running the command below to test if my configuration is working as expected
        "node index.js"
+       
 ![database connectd](https://user-images.githubusercontent.com/79808404/174456473-35958e61-5905-4fa3-99d0-120b69c0c48c.PNG)
 
 ## Testing Backend Code using REST API(POSTMAN)
@@ -371,6 +381,7 @@ From my Todo directory, I cd into client/src and created a new directory in the 
 #### STEP 2
   I installed Axios in my client directory which is a promise based HTTP client for node.js and the browser.
     "npm install axios"
+    
 ![npm install axi](https://user-images.githubusercontent.com/79808404/174457672-337b7cef-f4c9-4d1b-9129-7a7a4d001781.PNG)
 
 
