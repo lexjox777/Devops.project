@@ -4,7 +4,7 @@
 
   ### •	MEAN (MongoDB, ExpressJS, Angular, Node.js)
 
-           MongoDB (Document database) – Stores and allows to retrieve data.
+          MongoDB (Document database) – Stores and allows to retrieve data.
         •	Express (Back-end application framework) – Makes requests to Database for Reads and Writes.
         •	Angular (Front-end application framework) – Handles Client and Server Requests
         •	Node.js (JavaScript runtime environment) – Accepts requests and displays results to end user
