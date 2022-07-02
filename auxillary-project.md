@@ -182,7 +182,7 @@ from my terminal to create my Linux server in the cloud.
  
    I randomly selected a user and connect the user to the server using the private
    
-    “ _ ssh -i "aux-sh.pem" John@my-Private-Ip.eu-west-2.compute.amazonaws.com_
+     $ ssh -i "aux-sh.pem" John@my-Private-Ip.eu-west-2.compute.amazonaws.com
 
 ## ERROR ENCOUNTERED.
 
