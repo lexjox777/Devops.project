@@ -148,9 +148,28 @@ and checked the backup files are backed-up as expected by running
 
 #### STEP 14
  
-   I mounted /var/log on logs-lv logical volume 
+   I mounted /var/log on logs-lv logical volume by running the command below
+       
+          sudo mount /dev/webdata-vg/logs-lv /var/log
    
    ![12  mount var log on logs v](https://user-images.githubusercontent.com/79808404/179343018-3a6541a8-86fb-4a8a-9508-b0d3ab6c7b24.PNG)
+
+#### STEP 15
+
+ I restored log files back into /var/log directory by running the below command
+     
+     sudo rsync -av /home/recovery/logs/. /var/log
+
+
+![retore log files](https://user-images.githubusercontent.com/79808404/179343893-b1409b00-b68a-4f1e-bd67-d2ab688631dd.PNG)
+
+#### STEP 16
+ 
+ After restoring the backed-up files back into the /var/log directory I ran the below command to be sure that the files are restored as expected
+    
+      sudo ls -l /var/log
+
+![check if file restored](https://user-images.githubusercontent.com/79808404/179344076-273c5f5d-044f-46c2-81d8-0f1a44012582.PNG)
 
 
 
