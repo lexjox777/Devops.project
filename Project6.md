@@ -124,8 +124,58 @@ I verified that my logical vol was successfully created by running the command s
 
  #### STEP 12
  
- I mounted  /var/www/html on apps-lv logical volume by running the command 
+ I mounted  **/var/www/html** on **apps-lv** logical volume by running the command 
  
           sudo mount /dev/webdata-vg/apps-lv /var/www/html/
 
 ![18 sudo mount](https://user-images.githubusercontent.com/79808404/179341533-33b277d0-e14c-4c4d-a28e-e30feed4df01.PNG)
+
+
+#### STEP 13
+
+  I backup all the files in my log directory /var/log into /home/recovery/logs before mounting the file system by running 
+  
+    sudo rsync -av /var/log/. /home/recovery/logs/
+  
+![rsync backupfiles](https://user-images.githubusercontent.com/79808404/179342516-72b15328-2793-46c9-bee5-7144101cc4f2.PNG)
+
+and checked the backup files are backed-up as expected by running 
+  
+    sudo ls -l /home/recovery/logs
+    
+  ![check backup on recovery](https://user-images.githubusercontent.com/79808404/179343279-65cff6c5-86ea-49e5-a95a-0b8ae548c6a3.PNG)
+
+
+#### STEP 14
+ 
+   I mounted /var/log on logs-lv logical volume 
+   
+   ![12  mount var log on logs v](https://user-images.githubusercontent.com/79808404/179343018-3a6541a8-86fb-4a8a-9508-b0d3ab6c7b24.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
