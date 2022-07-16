@@ -173,15 +173,31 @@ and checked the backup files are backed-up as expected by running
 
 
 
+#### STEP 17
+  I ran the command _sudo blkid_ to check my **block id** to populate my fstab
+
+![sudo blkid](https://user-images.githubusercontent.com/79808404/179345219-4386e98c-0a43-4315-926d-2b9cda70499b.PNG)
+
+I insert the _block id_ in the _fstab_ by running the command
+  
+    sudo vi /etc/fstab
+    
+![fstab insert](https://user-images.githubusercontent.com/79808404/179345316-3765240c-2602-467b-b3ad-dd9206d853eb.PNG)
+
+I checked if my configuration works prfectly with _sudo mount -a_ command
+
+![sudo mount -a](https://user-images.githubusercontent.com/79808404/179345359-3f198e5f-2a16-488d-b881-a47275bc1a14.PNG)
+
+I reloaded the daemon to see if my configuration persist with the below command
+   
+    sudo systemctl daemon reload
+  
+![sudo daemon reload](https://user-images.githubusercontent.com/79808404/179345472-259db749-e870-4d51-abf8-9b4e352eed01.PNG)
 
 
+I used the command _df -h_ to see if my configuration is updated 
 
-
-
-
-
-
-
+![to be sure fstab updated](https://user-images.githubusercontent.com/79808404/179345538-67ac1210-f035-4513-9b26-96d9172e54e2.PNG)
 
 
 
