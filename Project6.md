@@ -31,7 +31,7 @@ iv. I created a new key pair for my instance and connect to my server with the g
 
 #### STEP 2
 
-I connected to my server on my terminal with the SSH key generated and run _lsblk_ command to inspect if the 3 newly created block devices are attached to my server. 
+I connected to my web-server on my terminal with the SSH key generated and run _lsblk_ command to inspect if the 3 newly created block devices are attached to my server. 
 
 ![4 to chck vol attch](https://user-images.githubusercontent.com/79808404/179340309-e91317f4-ba8c-43c9-8fdf-946a31a3f914.PNG)
   
@@ -200,11 +200,64 @@ I used the command _df -h_ to see if my configuration is updated
 ![to be sure fstab updated](https://user-images.githubusercontent.com/79808404/179345538-67ac1210-f035-4513-9b26-96d9172e54e2.PNG)
 
 
+ ## Prepare the Database Server
+ 
+ #### STEP 1
+    
+
+  
+i. I  replicated the steps above by creating 3 new volumes (db1,db2,db3) and set the size of each **volume to 10GiB** and the availability zone set to **us-east-1c** , same region as my other instances.
+ 
+
+ii. I attached the volumes created to my _database-server_ instance
+
+ 
+
+iii. I connected to my database-server on my terminal with the SSH key generated and run _lsblk_ command to inspect if the 3 newly created block devices are attached to my database-server. 
+
+![lsblk db](https://user-images.githubusercontent.com/79808404/179419201-8b4f4b85-fa5d-4202-9fe9-87d613d4236e.PNG)
+
+#### STEP 2
+  I use the command _sudo gdisk /dev/xvdf_  to create a partition for each of my blocks devices xvdf, xvdg and xvdh and set the code to **8E00.**  
+           
+           sudo gdisk /dev/xvdf
+           sudo gdisk /dev/xvdg
+           sudo gdisk /dev/xvdh
+
+![sudo gdisk dbase](https://user-images.githubusercontent.com/79808404/179419488-b463a550-ac8b-4e7e-a043-c12cf9edb0d8.PNG)
 
 
+#### STEP 3
+ 
+   I use the command key _lsblk_ to view the newly configured partition on each of disks created.
+   ![lsblk xvd](https://user-images.githubusercontent.com/79808404/179419535-345a08ec-56f3-4c85-be76-59aa247e4173.PNG)
 
 
+#### STEP 4
 
+  I installed my physical volume by running the command _sudo yum install lvm2_ 
+![10 phys vol install](https://user-images.githubusercontent.com/79808404/179340957-8677c296-0360-4843-9b3d-38fd93056840.PNG)
+
+and checked available partitions by running the command **sudo lvmdiskscan.**
+
+
+#### STEP 5
+
+  I marked my 3 newly created disk as physical volume by running the command 
+
+            sudo pvcreate /dev/xvdf1
+            sudo pvcreate /dev/xvdg1
+            sudo pvcreate /dev/xvdh1
+    
+  ![sudo pvcreate xvd db](https://user-images.githubusercontent.com/79808404/179419989-85e25a66-eb8c-49d3-919d-389cd204588a.PNG)
+                 
+         
+and verified the physical volume created was successful by running the command _sudo pvs_
+
+![pvs db](https://user-images.githubusercontent.com/79808404/179420059-ef044c72-ee13-48f7-9b08-8e676a2e5989.PNG)
+
+
+  
 
 
 
