@@ -257,10 +257,87 @@ and verified the physical volume created was successful by running the command _
 ![pvs db](https://user-images.githubusercontent.com/79808404/179420059-ef044c72-ee13-48f7-9b08-8e676a2e5989.PNG)
 
 
+#### STEP 6
+
+  I used vgcreate to add all 3 physical volume (PV) to a volume group and named the Volume group (VG) vg-database
+
+          sudo vgcreate vg-database /dev/xvdf1 /dev/xvdg1 /dev/xvdh1
+   
+  ![vgc create db](https://user-images.githubusercontent.com/79808404/179420252-2ba47ed5-344e-49ad-ae55-c1017e1e029c.PNG)
+
+    
+I verified that the volume group is created successfully by running the command 
+    
+            sudo vgs
+        
+   ![sudo vgs db](https://user-images.githubusercontent.com/79808404/179420324-8624170d-2362-4cb0-90eb-1866e1e7a88b.PNG)
+   
   
+  #### Step 7
+    
+   I used lvcreate to create a logical volumes db-lv  and set the PV sizes to 20G.
+    
+         sudo lvcreate -n db-lv -L 20G vg-database
+  
+![sudo lvcreate db](https://user-images.githubusercontent.com/79808404/179420633-729dc149-933a-4be0-809e-b3d68c92aebc.PNG)
+
+#### Step 8
+  In the root directory I created a /db directory by running the command _sudo mkdir /db_ and created the file system by running 
+       
+          sudo mkfs.ext4 /dev/vg-database/db-lv
+ 
+ ![sudo mkfs db](https://user-images.githubusercontent.com/79808404/179421023-bb4aa9ad-f6cf-4eda-a687-d7aaffd6e784.PNG)
+ 
+  I ran the command sudo ls -l /db to be sure my directory is empty before mounting
+  
+  ![sudo ls -l db](https://user-images.githubusercontent.com/79808404/179421463-1a0901ce-2e19-4975-937e-7f574e70dc66.PNG)
+
+
+#### STEP 9
+    
+   I mounted /dev/vg-database/db-lv on /db by running the command below
+       
+          sudo mount /dev/vg-database/db-lv /db
+          
+   and ran the command _df -h_ to view that my files are mounted as expected
+   
+   ![sudo mount db](https://user-images.githubusercontent.com/79808404/179421734-46e65067-ee97-4c5e-8948-14bb361869c2.PNG)
+
+   
+#### STEP 10
+  I ran the command _sudo blkid_ to check my  **block id** to populate my fstab
+
+![sudo blkid db](https://user-images.githubusercontent.com/79808404/179422580-9e1909f0-617c-441f-bb71-cca5f4e6a657.PNG)
 
 
 
+I insert the _block id_ in the _fstab_ by running the command
+  
+    sudo vi /etc/fstab
+    
+ ![fstab db](https://user-images.githubusercontent.com/79808404/179422624-49d15aad-b9eb-44d7-9d6f-420ddaeea194.PNG)
+
+    
+
+I checked if my configuration works prfectly with _sudo mount -a_ command
+
+![sudo mount -a db](https://user-images.githubusercontent.com/79808404/179422645-3ba9d210-33a7-4bdf-866d-63335b2e8670.PNG)
+
+
+
+I reloaded the daemon to see if my configuration persist with the below command
+   
+    sudo systemctl daemon reload
+  
+  ![sudo reload db](https://user-images.githubusercontent.com/79808404/179422655-30b1284e-ead9-4925-8435-018017e07be7.PNG)
+
+
+
+
+I used the command _df -h_ to see if my configuration is updated 
+
+
+![sudo df -h db](https://user-images.githubusercontent.com/79808404/179422662-9e685f30-b3cf-465f-8f3c-3ace8cff27de.PNG)
 
 
 
