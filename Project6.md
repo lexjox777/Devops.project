@@ -340,6 +340,110 @@ I used the command _df -h_ to see if my configuration is updated
 ![sudo df -h db](https://user-images.githubusercontent.com/79808404/179422662-9e685f30-b3cf-465f-8f3c-3ace8cff27de.PNG)
 
 
+## Installing Wordpress on my Web Server
+
+#### STEP 1
+
+  I started by updating my repository by running the following command 
+  
+      sudo yum update -y
+      
+  ![sudo yum update](https://user-images.githubusercontent.com/79808404/180614157-c9406a7e-d43f-4f3f-9207-991c0361850f.PNG)
+
+      
+#### STEP 2
+  I installed wget, Apache and it's dependencies by the below command
+  
+     sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json
+     
+ ![sudo yum install dependencies](https://user-images.githubusercontent.com/79808404/180614256-cc18d024-e4b9-4799-9108-175a97ba4704.PNG)
+
+
+#### STEP 3
+ I Installed PHP and its dependecies with the following command by first installing EPEL repository
+ 
+    sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+    
+![install php EPEL repo](https://user-images.githubusercontent.com/79808404/180614627-97b7bb1f-2547-4ef9-b30e-bea025f81733.PNG)
+
+#### |STEP 4
+I installed yum utilities and enable Remi-repository with the below command
+  
+    sudo yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+   
+![install yum utilities](https://user-images.githubusercontent.com/79808404/180614787-60ee83eb-a56d-45b4-81cf-0520729f3550.PNG)
+
+
+#### STEP 5
+  I used the below command to search for the PHP modules which are available for download.
+  
+    sudo yum module list php
+   
+ ![sudo dnf module list php](https://user-images.githubusercontent.com/79808404/180614930-0b2123ca-c534-435c-b422-dce767383074.PNG)
+
+And I install the newer release of the PHP module with the command
+
+    sudo dnf module reset php
+ 
+![sudo module reset](https://user-images.githubusercontent.com/79808404/180614992-00242f3c-7af4-4a4a-abad-9f34d9690c96.PNG)
+
+
+#### STEP 6
+
+   After installing the newer version of the PHP module, I enabled it by running the command
+      
+    sudo dnf module enable php:remi-7.4
+
+![sudo enable php 7 4](https://user-images.githubusercontent.com/79808404/180615115-4b238791-3198-4572-903e-0742d313cc29.PNG)
+
+
+#### STEP 7
+ I installed PHP , PHP-FPM (FastCGI Process Manager) and PHP Modules with the below command
+   
+    sudo dnf install php php-opcache php-gd php-curl php-mysqlnd
+    
+ ![sudo install php](https://user-images.githubusercontent.com/79808404/180615350-82706da7-5606-46fb-8d5f-272b20e9ea11.PNG)
+
+#### STEP 8
+
+I verified the version of my installed PHP to be sure its working as expected
+
+    php -v
+    
+ ![php version](https://user-images.githubusercontent.com/79808404/180615463-e63d1931-c5a6-4ecc-b418-d2e6d2882b9f.PNG)
+
+
+#### STEP 9
+
+I used the command below to start and enabled my PHP-FPM on boot-up
+
+    $ sudo systemctl start php-fpm
+    $ sudo systemctl enable php-fpm
+    
+![sudo systemctl start and enable php](https://user-images.githubusercontent.com/79808404/180615621-2f72f049-2930-41e5-a1a9-4102b9796773.PNG)
+
+And checked the status of my PHP with the command 
+
+    sudo systemctl status php-fpm
+
+![sudo systemctl status php](https://user-images.githubusercontent.com/79808404/180615688-17445dc0-d6ed-4d2c-81e4-de730d9ce13d.PNG)
+
+#### STEP 10
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  
 
 
 
