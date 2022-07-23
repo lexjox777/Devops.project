@@ -442,6 +442,9 @@ I restarted my apache webserver for PHP to work with the Apache webserver and ch
 
 #### STEP 11
   
+I verified that my configuration is working as expected by copying my public Ip from my Aws console and ran it on my browser
+  
+ ![Apache redhat Test page](https://user-images.githubusercontent.com/79808404/180617577-f2c115e2-5b57-4431-b1d5-4493ce9ad8d3.PNG)
 
 
 
