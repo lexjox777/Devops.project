@@ -416,9 +416,9 @@ I verified the version of my installed PHP to be sure its working as expected
 #### STEP 9
 
 I used the command below to start and enabled my PHP-FPM on boot-up
-
-    $ sudo systemctl start php-fpm
-    $ sudo systemctl enable php-fpm
+ 
+      $ sudo systemctl start php-fpm
+      $ sudo systemctl enable php-fpm
     
 ![sudo systemctl start and enable php](https://user-images.githubusercontent.com/79808404/180615621-2f72f049-2930-41e5-a1a9-4102b9796773.PNG)
 
@@ -429,12 +429,19 @@ And checked the status of my PHP with the command
 ![sudo systemctl status php](https://user-images.githubusercontent.com/79808404/180615688-17445dc0-d6ed-4d2c-81e4-de730d9ce13d.PNG)
 
 #### STEP 10
+  I setup a policy by Instruct SELinux to allow Apache to execute the PHP code via PHP-FPM by running
+    
+     sudo setsebool -P httpd_execmem 1
+ 
+I restarted my apache webserver for PHP to work with the Apache webserver and check the status if its running as expected by the below commands
 
+      sudo systemctl restart httpd
+      sudo systemctl status httpd
 
+![sudo restart httpd and check status](https://user-images.githubusercontent.com/79808404/180616781-373c39a0-5b31-468b-a88c-5f61a2d64e2f.PNG)
 
-
-
-
+#### STEP 11
+  
 
 
 
