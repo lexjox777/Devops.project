@@ -536,9 +536,79 @@ I changed my directory into var/www/html
     
  ![cd varHtml](https://user-images.githubusercontent.com/79808404/180653214-a9dc4ef0-88ea-41ed-bb83-da62de051245.PNG)
 
+### Installing and Configuring MySQL Database to work with Wordpress
 
-
+   #### STEP 1
+    
+ I started by updating my repository by running the command
+   
+      sudo yum update
+   
+  ![sudo yum update](https://user-images.githubusercontent.com/79808404/180657421-063cd4b9-6c56-4dfb-9a02-395fe744dfa6.PNG)
   
+  I installed mysql server on both my webserver and database server with the command
+    
+      sudo yum install mysql-server
+   
+   ![sudo yum install mysql](https://user-images.githubusercontent.com/79808404/180657520-4d209f09-e4cd-4509-9f39-bb0594a85ee8.PNG)
+
+#### STEP 2
+  I enabled mysql and verified that my service is up and running  with the below command
+      
+         sudo systemctl restart mysqld
+         sudo systemctl enable mysqld
+         sudo systemctl status mysqld
+
+![enable,start mysql](https://user-images.githubusercontent.com/79808404/180657618-71ac42bd-1328-476e-8647-779dcc5b72b2.PNG)
+    
+  
+  #### STEP 3
+     I ran the below command to access mysql console
+     
+        sudo mysql_secure_installation
+  
+  ![sudo secure installation](https://user-images.githubusercontent.com/79808404/180657880-195fc300-cd0e-4f37-b285-ddbcd462642e.PNG)
+     
+   I login into mysql console as a root user with the command
+ 
+       sudo mysql -u root -p
+
+![sudo root mysql](https://user-images.githubusercontent.com/79808404/180658066-1414b328-4815-4df9-815e-20a3888c661f.PNG)
+
+
+#### STEP 4
+  I created a database wordpress
+     
+      create database wordpress;
+      
+      show databases;       
+
+![create and show database](https://user-images.githubusercontent.com/79808404/180658150-d460659a-ba75-4f86-b62a-c56e1b0b33b0.PNG)
+
+
+#### STEP 5
+  
+    I created a user and grant the user all privileges
+    
+       CREATE USER 'wordpress'@'%' IDENTIFIED WITH mysql_native_password By 'Password';
+       
+       GRANT ALL PRIVILEGES ON *.* TO 'wordpress'@'WITH GRANT OPTION;
+       
+       flush privileges;
+
+![create user mysql](https://user-images.githubusercontent.com/79808404/180658372-39b91aa8-0fb4-453c-bb16-195a86408104.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
