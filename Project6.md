@@ -366,7 +366,7 @@ I used the command _df -h_ to see if my configuration is updated
     
 ![install php EPEL repo](https://user-images.githubusercontent.com/79808404/180614627-97b7bb1f-2547-4ef9-b30e-bea025f81733.PNG)
 
-#### |STEP 4
+#### STEP 4
 I installed yum utilities and enable Remi-repository with the below command
   
     sudo yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
@@ -447,12 +447,97 @@ I verified that my configuration is working as expected by copying my public Ip 
  ![Apache redhat Test page](https://user-images.githubusercontent.com/79808404/180617577-f2c115e2-5b57-4431-b1d5-4493ce9ad8d3.PNG)
 
 
+### Downloading wordpress
 
+#### STEP 12
+   I make a wordpress directory and changed into the directory
+      
+         mkdir wordpress
+         cd   wordpress
+ 
+![mkdir Cd wordpress](https://user-images.githubusercontent.com/79808404/180650737-1e0365bf-73d5-408b-881c-608d1281348a.PNG)
 
-
-
-
+#### STEP 13
+ I downloaded wordpress with the command below
    
+    sudo wget http://wordpress.org/latest.tar.gz
+   
+  ![download wordpress](https://user-images.githubusercontent.com/79808404/180650900-5c6face6-4a2c-42cf-a25a-0ddf95a24fdc.PNG)
+
+![ls -l to confirm wordpress](https://user-images.githubusercontent.com/79808404/180651122-ca2c5d83-8998-44d4-999d-f32c7c757f3d.PNG)
+
+
+ #### STEP 14
+  I extracted the file by the below command
+  
+     sudo tar xzvf latest.tar.gz   
+     
+  and changed directory to the extracted wordpress
+    
+     cd wordpress/
+  
+![cd wordpress rr](https://user-images.githubusercontent.com/79808404/180651249-de2b1923-2dfd-4a16-9635-487de8ce0091.PNG)
+
+#### STEP 15
+   I copied the files in my wp-config-sample.php into wp-config.php with the command
+   
+      sudo cp -R wp-config-sample.php wp-config.php
+
+![cp config php](https://user-images.githubusercontent.com/79808404/180651439-5264385a-2e53-41f9-a959-3bcc74e7df40.PNG)
+
+#### STEP 16
+   
+  I checked my present working directory and changed directory back to the wordpress folder
+      
+       $ pwd
+        
+       $ cd ..
+         
+![wrdpress wrdpress](https://user-images.githubusercontent.com/79808404/180651920-c58840ba-ff2b-4f42-befc-0c954ffbd797.PNG)
+
+  
+#### STEP 17
+  I copied the files in my wordpress/  into var/www/html and changed directory into the var folder with the command below
+  
+      sudo cp -R wordpress/  /var/www/html
+      
+      cd /var/www/html
+      
+  ![cp -R wrdpress   cd var](https://user-images.githubusercontent.com/79808404/180652216-9f32731b-390d-4ef8-a8d3-7cd2e5815470.PNG)
+
+
+#### STEP 18
+
+  After copying the files from my wordpress/ into the /var/wwww/html i removed the worpress/ folder with the command below.
+      
+     sudo rm -rf wordpress/
+ ![rm wordpress and ls](https://user-images.githubusercontent.com/79808404/180652402-3406442a-67a9-48b7-95a4-642f2dff0b04.PNG)
+   
+#### 19
+  I changed directory back to the wordpress folder from tne var directory with the command below
+  
+    cd ../..
+    cd wordpress
+    
+  ![cd back into wordpress](https://user-images.githubusercontent.com/79808404/180652647-a3e616f4-84a2-476d-9df4-e0664a0f4969.PNG)
+  
+ #### 20
+   I used the below command to copy files from wordpress to var/wwww/html
+    
+       sudo cp -R wordpress/. /var/www/html/
+    
+   and used the command _ls-l  /var/www/html_ to verified the comtent is copied succesfully.
+   
+   ![cp wrdpress to var and ls var](https://user-images.githubusercontent.com/79808404/180653094-1c20c949-a7a0-4fd5-8f90-bbfa9fabc49a.PNG)
+
+I changed my directory into var/www/html
+  
+    cd /var/www/html
+    
+ ![cd varHtml](https://user-images.githubusercontent.com/79808404/180653214-a9dc4ef0-88ea-41ed-bb83-da62de051245.PNG)
+
+
+
   
 
 
