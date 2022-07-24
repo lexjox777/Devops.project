@@ -624,13 +624,62 @@ I changed my directory into var/www/html
   
       sudo vi wp-config.php
       
+ ![configure wp-dtbsss](https://user-images.githubusercontent.com/79808404/180661677-3fdec92f-c86a-409c-ac8d-53ccbd69ad64.png)
+
+ and restarted my webserver with the command
    
+      sudo systemctl restart httpd
+   
+![sudo restart httpd](https://user-images.githubusercontent.com/79808404/180661753-bed78112-6486-4263-9f8f-e65663f4c3e6.PNG)
+
+#### STEP 4
+  In my webserver I disabled/renamed my apache test page by running the command
+    
+      sudo mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf_backup
+    
+  ![sudo disable apache test page](https://user-images.githubusercontent.com/79808404/180661905-82433643-11cb-4342-afff-9b7441ae239a.PNG)
+
+  
+#### STEP 6
+  from my webserver i connected remotely to my database and show databases by running the below command
+
+     sudo mysql -h myDatabaseServerPrivateIp  -u wordpress -p
+     
+ ![my webserver talk to my db](https://user-images.githubusercontent.com/79808404/180662055-d1b5e978-8ebc-4630-b9fc-2b0f7ff287ec.PNG)
 
 
+#### STEP 7
+  I change ownership to apache with the below command
+  
+      sudo chown -R apache:apache /var/www/html/
+  
+  ![chown to apache](https://user-images.githubusercontent.com/79808404/180662255-893dd4db-a8c8-4628-b723-164f323d8eae.PNG)
 
+#### STEP 8
+  I used the chcon command to change the SELinux context for file and Setsebool command to set the current state of the SELinux boolean to True with the below commands
+  
+    sudo chcon -t httpd_sys_rw_content_t /var/html/wordpress -R
+                        &
+    sudo setsebool -P httpd_can_network_connect=1
+                        &
+     sudo setsebool -P httpd_can_network_connect_db 1
+   
+ ![sudo chcon](https://user-images.githubusercontent.com/79808404/180662524-ea835668-d6a6-4c49-b00c-c53a1047446b.PNG)
 
+ ![sudo setsebool httpd](https://user-images.githubusercontent.com/79808404/180662532-51cd9681-bf1b-4038-a39f-392bdc1c885c.PNG)
 
+  
+#### STEP 9
 
+  I  opened my web browser and run my webserver public ip to verify if my setup works as expected.
+ 
+  ![wordpress landing page](https://user-images.githubusercontent.com/79808404/180662669-c777a7c1-2bab-46f1-bb1f-c508a4f1247f.PNG)
+  
+  ![wordpress installed](https://user-images.githubusercontent.com/79808404/180662686-4d0b9cec-2efe-43a4-9b9f-25d7b22b964a.PNG)
+
+![wordpress dashboard](https://user-images.githubusercontent.com/79808404/180662696-1a173457-b4db-4534-b9bd-812819ffb18c.PNG)
+
+    
 
 
 
