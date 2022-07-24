@@ -598,8 +598,33 @@ I changed my directory into var/www/html
 
 ![create user mysql](https://user-images.githubusercontent.com/79808404/180658372-39b91aa8-0fb4-453c-bb16-195a86408104.PNG)
 
+### Configure wordpress to connect to remote database
+
+  
+#### STEP 1
+   from my database server I ran the command below to input my binding configuration
+      
+        sudo vi /etc/my.cnf
+        
+  ![sudo vi](https://user-images.githubusercontent.com/79808404/180661009-30ed52f3-0906-44f4-ae31-aa0961f705af.PNG)
+  
+  ![sudo vi binding addrss](https://user-images.githubusercontent.com/79808404/180661017-2da4119f-1efc-484d-9bb5-18627f1c6297.PNG)
+
+  
+ #### STEP 2
+  I restarted my server to make my configuration to take effect with the command 
+     
+       sudo systemctl restart mysqld
+       
+ ![sudo restart mysql](https://user-images.githubusercontent.com/79808404/180661090-79759ce1-79be-4ec9-a462-88bf624ed8db.PNG)
 
 
+#### STEP 3
+  from my webserver I use the vi command to input my configuration 
+  
+      sudo vi wp-config.php
+      
+   
 
 
 
