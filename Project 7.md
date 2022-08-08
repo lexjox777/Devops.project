@@ -78,16 +78,23 @@ and ran the command below to check for available partition
 
 
 ### STEP 9
- I created 3 logical volumes apps, logs and opt wiht the command below
+ I created 3 logical volumes apps, logs and opt with the command below
  
      sudo lvcreate -n lv-apps -L 9G webdata-vg
      sudo lvcreate -n lv-logs -L 9G webdata-vg
      sudo lvcreate -n lv-opt -L 9G webdata-vg
 
+and ran the command below to verified that my logical volumes were created as expected
+   
+     sudo lvs
+       &
+     lsblk
 ![lvcreate apps,logs](https://user-images.githubusercontent.com/79808404/183427334-bff1195c-f4aa-47d9-9485-1901552e69aa.JPG)
     
-   
-   
+ ![sudo lvs](https://user-images.githubusercontent.com/79808404/183431040-c417f548-1fa8-4780-8962-0d258359e338.JPG)
+ 
+ ![lsblk for lvcreate](https://user-images.githubusercontent.com/79808404/183431078-0240af1b-acfe-4918-982f-0e485e47f6ab.JPG)
+ 
  
   
   
