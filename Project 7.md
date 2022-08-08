@@ -31,7 +31,6 @@ and ran the command _lsblk_ to view the partitions created
   ![partition created](https://user-images.githubusercontent.com/79808404/183359005-61d6e16d-3726-4df0-a89e-4f39938cb003.JPG)
 
 
-
 ### STEP 6
   I installed the LVM packages using the command 
     
@@ -95,10 +94,68 @@ and ran the command below to verified that my logical volumes were created as ex
  
  ![lsblk for lvcreate](https://user-images.githubusercontent.com/79808404/183431078-0240af1b-acfe-4918-982f-0e485e47f6ab.JPG)
  
+  I checked my entire setup with the command below
+   
+     sudo vgdisplay -v #view complete setup - VG, PV, and LV
+     
+  ![check complete setup](https://user-images.githubusercontent.com/79808404/183476909-6ce019d9-cd56-4d3f-8866-d8fdd979e5d9.JPG)
+
+
+### STEP 10
+  I formated my apps, logs and opt disk as xfs with the command below
+    
+      sudo mkfs -t xfs /dev/webdata-vg/lv-apps
+      sudo mkfs -t xfs /dev/webdata-vg/lv-logs
+      sudo mkfs -t xfs /dev/webdata-vg/lv-opt
+       
+  ![xfs apps,logs,opt](https://user-images.githubusercontent.com/79808404/183479774-308373e6-1afb-447e-a1f4-2f252a5df721.JPG)
+
+### STEP 11
  
+  I make a directory /mnt folder to mount my logical volumes with the command below
   
+     sudo mkdir /mnt/apps
+     sudo mkdir /mnt/logs
+     sudo mkdir /mnt/opt
+     
+  ![mnt](https://user-images.githubusercontent.com/79808404/183480980-dd3c5613-dad9-46d5-931d-a8e671d0481c.JPG)
+
+### STEP 12
+  I mounted my lv-apps,logs,opt on /mnt/apps,logs,opt with the comand below
+    
+     sudo mount /dev/webdata-vg/lv-apps /mnt/apps
+     sudo mount /dev/webdata-vg/lv-logs /mnt/logs
+     sudo mount /dev/webdata-vg/lv-opt /mnt/opt
   
+![mount lv vol](https://user-images.githubusercontent.com/79808404/183483952-2d5e744c-de9d-43c2-ac42-8c92d7f046c7.JPG)
+
+and used the command _lsblk_ to view if my disk is configured as expected
+![mount point](https://user-images.githubusercontent.com/79808404/183485568-9f067866-5e8b-469e-8c33-0bfdf37e6d00.JPG)
+
+### STEP 13
+ I updated my packages and dependencies with the command below
+   
+    sudo yum -y update
   
+![sudo yum update](https://user-images.githubusercontent.com/79808404/183486041-e10a5d6d-ffc3-4226-a069-75e0290cfcfc.JPG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
