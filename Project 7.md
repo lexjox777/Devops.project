@@ -51,6 +51,45 @@ and ran the command below to check for available partition
 
 
 ### STEP 7
+ I created a physical volume with the command below
+   
+     sudo pvcreate /dev/xvdf1
+     sudo pvcreate /dev/xvdg1
+     sudo pvcreate /dev/xvdh1
+     
+  and ran the command pvs to check the physical volumes were created as expected
+   
+       sudo pvs
+  
+  ![physical vol](https://user-images.githubusercontent.com/79808404/183424687-373b0493-35fb-4335-b39e-540be6e69e1a.JPG)
+   
+   ![sudo pvs](https://user-images.githubusercontent.com/79808404/183424733-1344187b-2de4-4c1e-8135-908782a434f2.JPG)
+
+ ### STEP 8
+   I used the command vgcreate to create a volume group for my partition with the command below
+   
+      sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1
+      
+   and ran the command below to check the volume group was created as expected
+     
+      sudo vgs
+      
+   ![sudo vgcreate](https://user-images.githubusercontent.com/79808404/183426174-69fc735b-93c9-46f4-8385-caf260376deb.JPG)
+
+
+### STEP 9
+ I created 3 logical volumes apps, logs and opt wiht the command below
+ 
+     sudo lvcreate -n lv-apps -L 9G webdata-vg
+     sudo lvcreate -n lv-logs -L 9G webdata-vg
+     sudo lvcreate -n lv-opt -L 9G webdata-vg
+
+![lvcreate apps,logs](https://user-images.githubusercontent.com/79808404/183427334-bff1195c-f4aa-47d9-9485-1901552e69aa.JPG)
+    
+   
+   
+ 
+  
   
   
 
