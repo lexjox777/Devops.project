@@ -41,13 +41,18 @@ and ran the command _lsblk_ to view the partitions created
 
 and ran the command below to check for available partition
   
-     sudo lvmdiskscan
+       sudo lvmdiskscan
+             &
+           lsblk
  
  ![lvmdiskscan](https://user-images.githubusercontent.com/79808404/183359858-44a9924e-101e-4be1-a4c1-e0c389aeb9c4.JPG)
    
+  ![partitiion lsblk](https://user-images.githubusercontent.com/79808404/183360878-d756dcf0-8a0c-4ff5-9294-299ce23ba7da.JPG)
+
+
+### STEP 7
   
-
-
+  
 
 
 
