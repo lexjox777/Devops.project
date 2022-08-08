@@ -140,8 +140,29 @@ and used the command _lsblk_ to view if my disk is configured as expected
 ![sudo yum update](https://user-images.githubusercontent.com/79808404/183486041-e10a5d6d-ffc3-4226-a069-75e0290cfcfc.JPG)
 
 
+## CONFIGURING DATABASE SERVER
 
+### STEP 1
+  I connected to my Database server with my DB SSH key from my local machine and ran the command below to update any outdated dependencies in my ubuntu 
+  
+    sudo apt update
+    
+ ![sudo apt update](https://user-images.githubusercontent.com/79808404/183511173-3226686d-1011-4483-9c56-e4804ac47657.JPG)
 
+ ### STEP 2 
+   I installed mysql server on my ubuntu server
+   
+       sudo apt install mysql-server -y
+       
+ ![sudo install mysql](https://user-images.githubusercontent.com/79808404/183511221-cb9ccb85-b0b7-499f-9184-4e9b05c433fd.JPG)
+ 
+       
+  ### STEP 3
+  I created a database 'tooling' and created a database user 'webaccess' and conected to my webserver 1 with the CIDR IP4
+  
+   ![ip4 cidr](https://user-images.githubusercontent.com/79808404/183514828-9462e055-b8b7-47f7-b910-ff51f64c76a3.JPG)
+
+![db create](https://user-images.githubusercontent.com/79808404/183514845-d64599f8-401d-4bcf-9948-b966af9f80b4.JPG)
 
 
 
