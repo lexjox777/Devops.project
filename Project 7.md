@@ -160,13 +160,22 @@ and used the command _lsblk_ to view if my disk is configured as expected
   ### STEP 3
   I created a database 'tooling' and created a database user 'webaccess' and conected to my webserver 1 with the CIDR IP4
   
+       create database tooling;
+           &
+       create user 'webaccess'@'172.31.0.0/16' identified by 'password';
+ 
    ![ip4 cidr](https://user-images.githubusercontent.com/79808404/183514828-9462e055-b8b7-47f7-b910-ff51f64c76a3.JPG)
 
 ![db create](https://user-images.githubusercontent.com/79808404/183514845-d64599f8-401d-4bcf-9948-b966af9f80b4.JPG)
 
+and I granted all permission to webaccess user on tooling database from webservers CIDR subnet
+  
+      grant all privileges on tooling.* to 'webaccess'@'172.31.0.0/16';
+         
+            &
+      flush privileges;  
 
-
-
+![grant priv](https://user-images.githubusercontent.com/79808404/183517289-70e26f86-1076-46b2-9078-e0db1bd0751f.JPG)
 
 
 
