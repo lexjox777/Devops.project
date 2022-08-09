@@ -201,10 +201,6 @@ and used the command _lsblk_ to view if my disk is configured as expected
   ![check port used by NFS](https://user-images.githubusercontent.com/79808404/183702742-95dc836e-875a-4d8e-8ec7-df34944f70df.JPG)
   
   ![edit NFS inbound rule](https://user-images.githubusercontent.com/79808404/183704432-3c116d54-9a19-478f-8e88-5973cff60087.JPG)
-
-
-    
-    
     
 
 
@@ -247,12 +243,83 @@ and I granted all permission to webaccess user on tooling database from webserve
 
 
 
+## Prepare The Webservers
+
+### STEP 1 
+  I conected my webserver 1 with the SSH keys and install nfs-utils with the command below
+    
+       sudo yum install nfs-utils nfs4-acl-tools -y
+      
+   ![nfs utils on webserver1](https://user-images.githubusercontent.com/79808404/183707272-5f6a8f6a-8681-43cb-851b-ab85b2fc9957.JPG)
 
 
+### STEP 2
+   I make directory var/www and mounted it to the NFS server using the NFS private Ip address and used the command _df -h_ to verified that my NFS was mounted successfully.
+      
+        sudo mkdir /var/www
+           &
+       sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/apps /var/www
+      
+![sudo mkdir var](https://user-images.githubusercontent.com/79808404/183711649-e10b80ea-742e-45c6-b9df-3af35e4bfb18.JPG)
+  
+![mount NFS privateIP](https://user-images.githubusercontent.com/79808404/183711689-277c0649-55be-4bbf-8608-2159c9f6df2e.JPG)
+
+  
+### STEP 3
+  I used the vi editor and input the below configuration 
+   
+     sudo vi /etc/fstab
+     
+        &
+     <NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 0   
+     
+  ![sudo VI fstb](https://user-images.githubusercontent.com/79808404/183720469-7c48ca12-5bd5-4209-8e5f-f3237860929c.JPG)
+
+![sudo vi fstab](https://user-images.githubusercontent.com/79808404/183720527-1a8177d5-45cd-4382-bd7c-f6ec06cb3ca4.JPG)
 
 
+  ## INSTALLING APACHE
+  
+### STEP 1
+  I used the command below to install Remi's reposotory, Apache and PHP on my server
+     
+       sudo yum install httpd -y
+       
+  ![apache install](https://user-images.githubusercontent.com/79808404/183721379-9ec0e15f-ecf7-48da-9ce6-bcb37d16d5a0.JPG)
+
+        sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+![sudo dnf install fedoporaproject](https://user-images.githubusercontent.com/79808404/183725683-c3050917-1988-4483-a6f4-afe322724255.JPG)
+
+         sudo dnf install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+
+![sudo install dnf utils](https://user-images.githubusercontent.com/79808404/183724135-53bb8b67-262c-4f7d-acc0-e6e1ca2eb83a.JPG)
+
+         sudo dnf module reset php
+         
+  ![sudo dnf reset](https://user-images.githubusercontent.com/79808404/183724539-d2ec215f-28b4-413a-9878-df66c6e0ef57.JPG)
+     
+     
+         **sudo dnf module enable php:remi-7.4**
+         
+  ![sudo dnf enable php](https://user-images.githubusercontent.com/79808404/183725017-1c77e64e-3d23-4358-b9e5-5b54b6da0878.JPG)
+   
+         
+         sudo dnf install php php-opcache php-gd php-curl php-mysqlnd
+         
+![sudo dnf install php](https://user-images.githubusercontent.com/79808404/183724821-8437ced1-981c-44f3-9c2f-31cfd370e717.JPG)
 
 
+         sudo systemctl start php-fpm
+                &
+         sudo systemctl enable php-fpm
+                 &
+         setsebool -P httpd_execmem 1
+
+   ![start,enable php](https://user-images.githubusercontent.com/79808404/183726092-f946609d-ebd7-4be1-beb4-19a7fffb741e.JPG)
+
+
+         
 
 
 
