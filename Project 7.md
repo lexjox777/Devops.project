@@ -140,6 +140,29 @@ and used the command _lsblk_ to view if my disk is configured as expected
 ![sudo yum update](https://user-images.githubusercontent.com/79808404/183486041-e10a5d6d-ffc3-4226-a069-75e0290cfcfc.JPG)
 
 
+### STEP 14
+  I configured my NFS server by installing NFS Utilities with the below command
+    
+       sudo yum install nfs-utils -y
+
+   ![sudo install nfs-utils](https://user-images.githubusercontent.com/79808404/183573745-b8b5060d-5ead-4425-96b0-e528a5401991.JPG)
+
+  and I started, enabled and checked the status of my configured NFS Server with the command below
+     
+        sudo systemctl start nfs-server.service
+        sudo systemctl enable nfs-server.service
+        sudo systemctl status nfs-server.service
+        
+   ![nfs confg](https://user-images.githubusercontent.com/79808404/183574928-ec87d59d-04a7-4f7c-a61f-ba59942c4f5a.JPG)
+ 
+  
+  
+ ### STEP 15
+   
+  
+  
+
+
 ## CONFIGURING DATABASE SERVER
 
 ### STEP 1
