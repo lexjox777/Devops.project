@@ -192,7 +192,17 @@ and used the command _lsblk_ to view if my disk is configured as expected
    
    ![vi cidr](https://user-images.githubusercontent.com/79808404/183699419-f58dc0cb-edb2-4340-9bc9-f43d767e5d47.JPG)
 
-   
+### STEP 18
+  I used the below command to check the port NFS is running on
+  and I opened the port in my security group by adding a new inbound rule with the port number.
+  
+     rpcinfo -p | grep nfs
+     
+  ![check port used by NFS](https://user-images.githubusercontent.com/79808404/183702742-95dc836e-875a-4d8e-8ec7-df34944f70df.JPG)
+  
+  ![edit NFS inbound rule](https://user-images.githubusercontent.com/79808404/183704432-3c116d54-9a19-478f-8e88-5973cff60087.JPG)
+
+
     
     
     
