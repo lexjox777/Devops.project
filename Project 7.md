@@ -318,12 +318,30 @@ and I granted all permission to webaccess user on tooling database from webserve
 
    ![start,enable php](https://user-images.githubusercontent.com/79808404/183726092-f946609d-ebd7-4be1-beb4-19a7fffb741e.JPG)
 
+### STEP 2
+   I verified that my Apache files and directory are available on my Web server /var/www and on my NFS Server /mnt/apps by creating a touch test.txt file on my web server and I view the same file on my NFS Server
+   
+     
+   ![verify NFS mounted](https://user-images.githubusercontent.com/79808404/183771105-528323d5-6b2b-4326-8f85-8b7b85ea8f9e.JPG)
 
-         
+  
+ ### STEP 3
+   I located my Apache log folder on the web server and mount it to NFS server by running the below command
+     
+    sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/logs /var/log/httpd
 
 
+![mount Nfs on httpd](https://user-images.githubusercontent.com/79808404/183772122-40283aa2-c8fe-4167-ab46-183872c90671.JPG)
 
 
+### STEP 4
+  I used the vi editor to configure fstab for my httpd server and input the command below
+      
+       <NFS-Server-Private-IP-Address>:/mnt/logs /var/log/httpd nfs defaults 0 0
+ 
+ ![sudo vi httpd config](https://user-images.githubusercontent.com/79808404/183773550-41691c6b-e83c-49f6-ba2e-a59102ce2aee.JPG)
+      
+  
 
 
 
