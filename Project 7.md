@@ -337,6 +337,8 @@ and I granted all permission to webaccess user on tooling database from webserve
 ### STEP 4
   I used the vi editor to configure fstab for my httpd server and input the command below
       
+       sudo vi /etc/fstab
+             &
        <NFS-Server-Private-IP-Address>:/mnt/logs /var/log/httpd nfs defaults 0 0
  
  ![sudo vi httpd config](https://user-images.githubusercontent.com/79808404/183773550-41691c6b-e83c-49f6-ba2e-a59102ce2aee.JPG)
