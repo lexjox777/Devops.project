@@ -177,7 +177,25 @@ and used the command _lsblk_ to view if my disk is configured as expected
       
 ![restart nfs](https://user-images.githubusercontent.com/79808404/183577682-15e441b8-7009-4df4-ab1b-2f1c9d050dec.JPG)
 
+### STEP 17
+  I used my vi editor mode to configured access for clients within the same SUbnet-CIDR 
+    
+      sudo vi /etc/exports
+      
+  ![vi export](https://user-images.githubusercontent.com/79808404/183699053-6897606e-77db-46c8-8764-6d7c8f24fc70.JPG)
+      
+   and input the below command
+     
+       /mnt/apps 172.31.80.0/20(rw,sync,no_all_squash,no_root_squash)
+      /mnt/logs 172.31.80.0/20(rw,sync,no_all_squash,no_root_squash)
+      /mnt/opt 172.31.80.0/20(rw,sync,no_all_squash,no_root_squash)    
    
+   ![vi cidr](https://user-images.githubusercontent.com/79808404/183699419-f58dc0cb-edb2-4340-9bc9-f43d767e5d47.JPG)
+
+   
+    
+    
+    
 
 
 ## CONFIGURING DATABASE SERVER
