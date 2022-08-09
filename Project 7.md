@@ -155,12 +155,29 @@ and used the command _lsblk_ to view if my disk is configured as expected
         
    ![nfs confg](https://user-images.githubusercontent.com/79808404/183574928-ec87d59d-04a7-4f7c-a61f-ba59942c4f5a.JPG)
  
-  
-  
+ 
  ### STEP 15
+ 
+ I set permission that will allow my webserver to read, write and execute files on NFS with the command below
    
+     sudo chown -R nobody: /mnt/apps
+     sudo chown -R nobody: /mnt/logs
+     sudo chown -R nobody: /mnt/opt
+     
+     
+     sudo chmod -R 777 /mnt/apps
+     sudo chmod -R 777 /mnt/logs
+     sudo chmod -R 777 /mnt/opt
   
-  
+ 
+ ### STEP 16
+   I restarted my NFS Server after configuration with the command below
+   
+      sudo systemctl restart nfs-server.service
+      
+![restart nfs](https://user-images.githubusercontent.com/79808404/183577682-15e441b8-7009-4df4-ab1b-2f1c9d050dec.JPG)
+
+   
 
 
 ## CONFIGURING DATABASE SERVER
