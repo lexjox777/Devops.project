@@ -402,8 +402,8 @@ and I granted all permission to webaccess user on tooling database from webserve
 
 ### STEP 6
   I opened port 80 in my EC2 instance to allow my webserver run on http
-  
-   ![http port 80](https://user-images.githubusercontent.com/79808404/183863166-49569f42-4065-4d7f-84d3-8d080c046a5e.JPG)
+ 
+ ![hhtp80](https://user-images.githubusercontent.com/79808404/183903800-2b5d6bff-f882-47d1-81af-e5d941ec8c3a.JPG)
 
 
 ### STEP 7
@@ -438,4 +438,106 @@ and view if my webserver is communicating to the NFS server by inputing my webse
 
    ![php lognpage](https://user-images.githubusercontent.com/79808404/183873066-249c0c2d-8250-4796-9f7a-034264fc13f1.JPG)
 
+
+### STEP 9
+   I updated my webserver configuration to connect to my database in /var/www/html/functions.php file by using vi editor and inputing the scripts below
+     
+        sudo vi /var/www/html/functions.php
+                   &
+        $db = mysqli_connect('my-database-private-ip','username','password','tooling');
+  
+  ![vi funcn php](https://user-images.githubusercontent.com/79808404/183929412-3ca6a167-4b91-422b-bc5b-c33116dcf0f1.JPG)
+  
+  ![function php](https://user-images.githubusercontent.com/79808404/183929442-99c70032-2335-40d5-a040-73ec788ed77d.JPG)
+ 
+   
+ ### STEP 10
+ 
+  I Installed mysql on my Webserver with the command
+   
+      sudo yum install mysql
+   
+  ![mysql instal on webserver](https://user-images.githubusercontent.com/79808404/183937496-e414c093-739f-4d6b-b2fd-7434451e0199.JPG)
+  
+   I Opened HTTP port 80 in my DB EC2 instance inbound rule with custom Subnet-CIDR IP of my Webserver 1.
+
+![mysql port](https://user-images.githubusercontent.com/79808404/183937847-14f9a621-02dc-4c4b-82e4-2d527c3d6172.JPG)
+ 
+   I ran the command below edit the binding rules in my **mysql DB Server** configuration
+     
+       sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+   
+  ![mysql vi to bind add](https://user-images.githubusercontent.com/79808404/183938968-b3f98d9b-1db1-4197-a17d-99b8b1c7a662.JPG)
+   
+   and I configured the binding address to 0.0.0.0 in my DB Server configuration
+     
+   ![mysql bind ad](https://user-images.githubusercontent.com/79808404/183939169-5b3698cc-3ddc-4e86-b664-dd096caa4953.JPG)
+ 
+  
+  I restarted my DB Server to make the configuration take effect
+    
+      sudo systemctl restart mysql
+           &
+      sudo systemctl status mysql
+  
+ ![mysql restart](https://user-images.githubusercontent.com/79808404/183944678-08ef6cdd-999a-4037-8834-402edb87d0e2.JPG)
+   
+ 
+ ### STEP 11
+   I cd into the folder tooling/ in my webserver1
+     
+         cd tooling/
+         
+   In my webserver1,  I applied tooling-db.sql script by running the below command
+       
+         mysql -h <databse-private-ip> -u <db-username> -p <db-pasword> < tooling-db.sql
+    
+    
+ ![mysql -h tooling](https://user-images.githubusercontent.com/79808404/183945789-19df1dae-90b5-4fcc-abfe-d2809b0f21f1.JPG)
+
+  
+  
+ ### STEP 12
+   In my Mysql database , ran the command below to view my databases
+   
+     show databases;
+     
+   and changed database to tooling
+   
+     use tooling;
+     
+   and the command below to view users
+       
+     use tables;
+     
+     
+ ![show databs](https://user-images.githubusercontent.com/79808404/183951122-c66528e6-c4e9-47f3-9293-f82a2e218502.JPG)
+  
+  
+  I used the command to select user 
+  
+     select * from users;
+     
+  ![select  from users](https://user-images.githubusercontent.com/79808404/183953270-bcd3021f-b5cc-4f99-bb87-a0b958be1c18.JPG)
+
+
+from my Webserver1 I ran the below command to view the configuration in my webserver tooling if it corespond to the response from my database table
+
+     sudo vi tooling-db.sql
+   
+ ![webserver reading info from DB](https://user-images.githubusercontent.com/79808404/183954854-29d2a706-ac4b-4954-977d-7b6ec4ece6db.JPG)
+ 
+     
+  
+  ### STEP 13
+  I opened my web browser and input my webserver1 public IP to view the interface of my application and logon to the application.
+  
+   ![admin login](https://user-images.githubusercontent.com/79808404/183957335-669a8292-4ac8-4f76-8185-26ade6df3bf9.JPG)
+
+ 
+ 
+ 
+    
+  
+   
 
