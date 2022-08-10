@@ -6,12 +6,12 @@ Project Achitecture and Goals.
 
 
 
-Infrastructure: AWS
-Webserver Linux: Red Hat Enterprise Linux 8
-Database Server: Ubuntu 22.04 + MySQL
-Storage Server: Red Hat Enterprise Linux 8 + NFS Server
-Programming Language: PHP
-Code Repository: GitHub
+       Infrastructure: AWS
+       Webserver Linux: Red Hat Enterprise Linux 8
+       Database Server: Ubuntu 22.04 + MySQL
+       Storage Server: Red Hat Enterprise Linux 8 + NFS Server
+       Programming Language: PHP
+       Code Repository: GitHub
 
 
 
