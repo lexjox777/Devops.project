@@ -1,3 +1,30 @@
+# Implementation of a web solution for DevOps team using LAMP stack with remote Database and NFS servers.
+
+Project Achitecture and Goals.
+  
+  ![project 7 architecture](https://user-images.githubusercontent.com/79808404/183841182-3c5b63e0-6d8b-48ab-9017-8f7afd9f3415.png)
+
+
+
+Infrastructure: AWS
+Webserver Linux: Red Hat Enterprise Linux 8
+Database Server: Ubuntu 22.04 + MySQL
+Storage Server: Red Hat Enterprise Linux 8 + NFS Server
+Programming Language: PHP
+Code Repository: GitHub
+
+
+
+
+
+
+
+
+
+
+
+
+
 # DEVOPS TOOLING WEBSITE SOLUTION
 
 ### STEP 1
