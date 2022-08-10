@@ -398,5 +398,44 @@ and I granted all permission to webaccess user on tooling database from webserve
 
 ![copy html to var html](https://user-images.githubusercontent.com/79808404/183858318-cac571aa-0066-4437-998f-97597d3256aa.JPG)
 
+![ls html](https://user-images.githubusercontent.com/79808404/183859030-6705cc5d-446a-4c8b-ba68-75443d5da216.JPG)
+
+### STEP 6
+  I opened port 80 in my EC2 instance to allow my webserver run on http
+  
+   ![http port 80](https://user-images.githubusercontent.com/79808404/183863166-49569f42-4065-4d7f-84d3-8d080c046a5e.JPG)
+
+
+### STEP 7
+   I disabled SELinux with the command below
+      
+      sudo setenforce 0
+    
+   ![sudo setenforce](https://user-images.githubusercontent.com/79808404/183871863-be17f3ac-976c-4e28-b730-8d9b10561d77.JPG)
+
+      
+   and made the changes permanent by by editing selinux configuration with vi editor by running
+     
+       sudo vi /etc/sysconfig/selinux
+             
+   and i set 
+   
+         SELinux = disabled
+   ![disable selinux](https://user-images.githubusercontent.com/79808404/183872082-01565205-35f1-4fe2-9e85-5cabee60384e.JPG)
+      
+ ### STEP 8
+   I restarted my Apache to make my configuration take effect with the command below
+      
+          sudo systemctl restart httpd
+          
+   and checked the status of my Apache to see if its active with the command
+        
+         sudo systemctl status httpd
+
+![sudo status httpd](https://user-images.githubusercontent.com/79808404/183872754-023f8ba6-8480-4374-af1f-20bdc24229c8.JPG)
+
+and view if my webserver is communicating to the NFS server by inputing my webserver public ip on my web browser
+
+   ![php lognpage](https://user-images.githubusercontent.com/79808404/183873066-249c0c2d-8250-4796-9f7a-034264fc13f1.JPG)
 
 
