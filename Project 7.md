@@ -370,8 +370,33 @@ and I granted all permission to webaccess user on tooling database from webserve
  
  ![sudo vi httpd config](https://user-images.githubusercontent.com/79808404/183773550-41691c6b-e83c-49f6-ba2e-a59102ce2aee.JPG)
       
+### 5TEP 5
+   I installed git repository on my Web Server and initialiazed it with the command
+      
+      sudo yum install git
+      
+         &
+      git init 
+      
+   ![install git](https://user-images.githubusercontent.com/79808404/183854345-cd044204-4214-42c3-bcf4-a57bab5cf736.JPG)
+   
+ ### STEP 6
+   i forked out a tooling file( jenkin's and Docker file) from git repo to my git repository
+     
+       git clone https://github.com/darey-io/tooling.git
   
+   i ran a _ls_ command to view the cloned tooling repository on my webserver and cd into the folder
+   
+   ![git ls](https://user-images.githubusercontent.com/79808404/183857524-14161ddf-5c9e-43b6-8a50-10e69b810d52.JPG)
 
+    
+  I deployed the html folder in the tooling to /var/www/html
+      
+      ls /var/www
+      
+      sudo cp -R html/. /var/www/html
+
+![copy html to var html](https://user-images.githubusercontent.com/79808404/183858318-cac571aa-0066-4437-998f-97597d3256aa.JPG)
 
 
 
