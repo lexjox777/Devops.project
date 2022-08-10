@@ -1,8 +1,11 @@
 # Implementation of a web solution for DevOps team using LAMP stack with remote Database and NFS servers.
 
-Project Achitecture and Goals.
+### Project Achitecture and Goals.
+
+   The scope of this project is to implement a several Web Server to share a common Database and access the same files using Network File System (NFS)
   
   ![project 7 architecture](https://user-images.githubusercontent.com/79808404/183841182-3c5b63e0-6d8b-48ab-9017-8f7afd9f3415.png)
+
 
 
 
@@ -15,13 +18,7 @@ Project Achitecture and Goals.
 
 
 
-
-
-
-
-
-
-
+#
 
 
 
