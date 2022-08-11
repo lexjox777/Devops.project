@@ -1,3 +1,17 @@
+# Implementing a Load Balancer Web Solution for Devops Team
+   
+   ### Project Architecture and Goals
+    
+  In this project we will enhance our Tooling Website solution by adding a Load Balancer to distribute traffic between Web Servers and allow users to access our website using a single URL.
+    
+  ![proj arch](https://user-images.githubusercontent.com/79808404/184222130-c7e16af6-6270-4f3a-b847-fa52725b1de1.png)
+
+
+
+
+
+
+
 # LOAD BALANCER SOLUTION WITH APACHE
 
 ### STEP 1
