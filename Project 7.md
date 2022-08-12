@@ -267,7 +267,7 @@ and I granted all permission to webaccess user on tooling database from webserve
 
 
 
-## Prepare The Webserver1 and Webserver2
+## Preparing The Webserver1 and Webserver2
 
 ### STEP 1 
   I conected my webserver 1 with the SSH keys and install nfs-utils with the command below
@@ -342,8 +342,8 @@ and I granted all permission to webaccess user on tooling database from webserve
 
    ![start,enable php](https://user-images.githubusercontent.com/79808404/183726092-f946609d-ebd7-4be1-beb4-19a7fffb741e.JPG)
 
-
-  ## I repeated the same step 1 - 4 for my Webserver2 after connecting to the ssh key from my local machine..
+ #
+  ## I repeated the same step 1 - 4 above for my Webserver2 after connecting to the ssh key from my local machine..
   #
 
 
