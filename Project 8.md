@@ -93,15 +93,60 @@
    ![verify conf on web](https://user-images.githubusercontent.com/79808404/184116766-2a3697a5-10c8-449e-b232-d411b030446f.JPG)
  
     
+### STEP 7
+  I ran the command below on my Web Servers to view access logs of each Webservers receiving HTTP GET requests from my Load Balancer and confirming a new logs in each web servers each time the web browser page is refreshed.   
+  
+       sudo tail -f /var/log/httpd/access_log
+       
+  ![access log for web1](https://user-images.githubusercontent.com/79808404/184288441-883eafe2-eb11-482b-b1ee-4d8080d2f6ea.JPG)
+
+![web2 log](https://user-images.githubusercontent.com/79808404/184288455-6fe2b9c3-cd36-4354-9b20-53d95c9c25f3.JPG)
 
 
+
+## Optional Steps-  Configuring Local DNS Names Resolution
+  ### Configuring my IP address to domain name mapping my Load Balancer
+  
+  #### STEP 1
+   I opened the file below in my Load Balancer server and input my each web servers Private IP and give an arbitrary name
    
+       sudo vi /etc/hosts  
+     
+        &
+      <WebServer1-Private-IP-Address> Web1
+      <WebServer2-Private-IP-Address> Web2  
+      
+![sudo vi host](https://user-images.githubusercontent.com/79808404/184290437-2ea6dd12-96dd-41c4-b267-1d0d2ce305ef.JPG)
+
    
+ ![hosts web1 web2](https://user-images.githubusercontent.com/79808404/184290448-87d04f16-2550-44b1-bd65-cb29ca0c6903.JPG)
+
+#### STEP 2
+   I updated my Load Balancer config file IP addresses to the above input 
+       
+        sudo vi /etc/apache2/sites-available/000-default.conf
+          
+                &
+                
+         BalancerMember http://Web1:80 loadfactor=5 timeout=1
+         BalancerMember http://Web2:80 loadfactor=5 timeout=1
+         
+       
+  ![web1web2](https://user-images.githubusercontent.com/79808404/184292067-2e4de9de-4f13-4660-ba32-bae972612d22.JPG)
+       
    
-   
-   
-   
-   
+#### STEP 3
+  I used the curl command to curl my web servers from my Load balancer server locally with the below command
+     
+       curl http://Web1
+       curl http://Web2
+       
+       
+  ![curl web1](https://user-images.githubusercontent.com/79808404/184292121-7c41cd14-dd77-411d-be53-1f6527c55467.JPG)
+  
+  ![curl web2](https://user-images.githubusercontent.com/79808404/184292126-37179c3b-8e9a-4732-afbd-830865988028.JPG)
+    
+     
    
    
    
