@@ -4,14 +4,14 @@
 
    ### LAMP Stack is an example of WEB Stack Technology, which is a set of frameworks and tools used to develop a well-functioning software product.
 
-   •	### LAMP (Linux, Apache, MySQL, PHP or Python, or Perl)
+   	* LAMP (Linux, Apache, MySQL, PHP or Python, or Perl)
    
    **other technology stack are**
    
    
- •  ###  LEMP (Linux, Nginx, MySQL, PHP or Python, or Perl)
- •  ###  MERN (MongoDB, ExpressJS, ReactJS, NodeJS)
- •  ###  MEAN (MongoDB, ExpressJS, AngularJS, NodeJS
+        *  LEMP (Linux, Nginx, MySQL, PHP or Python, or Perl)
+        *  MERN (MongoDB, ExpressJS, ReactJS, NodeJS)
+        *  MEAN (MongoDB, ExpressJS, AngularJS, NodeJS
 
 
 
