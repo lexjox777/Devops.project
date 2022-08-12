@@ -267,7 +267,7 @@ and I granted all permission to webaccess user on tooling database from webserve
 
 
 
-## Prepare The Webservers
+## Prepare The Webserver1 and Webserver2
 
 ### STEP 1 
   I conected my webserver 1 with the SSH keys and install nfs-utils with the command below
@@ -304,7 +304,7 @@ and I granted all permission to webaccess user on tooling database from webserve
 
   ## INSTALLING APACHE
   
-### STEP 1
+### STEP 4
   I used the command below to install Remi's reposotory, Apache and PHP on my server
      
        sudo yum install httpd -y
@@ -342,14 +342,19 @@ and I granted all permission to webaccess user on tooling database from webserve
 
    ![start,enable php](https://user-images.githubusercontent.com/79808404/183726092-f946609d-ebd7-4be1-beb4-19a7fffb741e.JPG)
 
-### STEP 2
+
+  ## I repeated the same step 1 - 4 for my Webserver2 after connecting to the ssh key from my local machine..
+  #
+
+
+### STEP 5
    I verified that my Apache files and directory are available on my Web server /var/www and on my NFS Server /mnt/apps by creating a touch test.txt file on my web server and I view the same file on my NFS Server
    
      
    ![verify NFS mounted](https://user-images.githubusercontent.com/79808404/183771105-528323d5-6b2b-4326-8f85-8b7b85ea8f9e.JPG)
 
   
- ### STEP 3
+ ### STEP 6
    I located my Apache log folder on the web server and mount it to NFS server by running the below command
      
     sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/logs /var/log/httpd
@@ -358,7 +363,7 @@ and I granted all permission to webaccess user on tooling database from webserve
 ![mount Nfs on httpd](https://user-images.githubusercontent.com/79808404/183772122-40283aa2-c8fe-4167-ab46-183872c90671.JPG)
 
 
-### STEP 4
+### STEP 7
   I used the vi editor to configure fstab for my httpd server and input the command below
       
        sudo vi /etc/fstab
@@ -367,7 +372,7 @@ and I granted all permission to webaccess user on tooling database from webserve
  
  ![sudo vi httpd config](https://user-images.githubusercontent.com/79808404/183773550-41691c6b-e83c-49f6-ba2e-a59102ce2aee.JPG)
       
-### 5TEP 5
+### 5TEP 8
    I installed git repository on my Web Server and initialiazed it with the command
       
       sudo yum install git
@@ -377,7 +382,7 @@ and I granted all permission to webaccess user on tooling database from webserve
       
    ![install git](https://user-images.githubusercontent.com/79808404/183854345-cd044204-4214-42c3-bcf4-a57bab5cf736.JPG)
    
- ### STEP 6
+ ### STEP 9
    i forked out a tooling file( jenkin's and Docker file) from git repo to my git repository
      
        git clone https://github.com/darey-io/tooling.git
@@ -397,13 +402,13 @@ and I granted all permission to webaccess user on tooling database from webserve
 
 ![ls html](https://user-images.githubusercontent.com/79808404/183859030-6705cc5d-446a-4c8b-ba68-75443d5da216.JPG)
 
-### STEP 6
+### STEP 10
   I opened port 80 in my EC2 instance to allow my webserver run on http
  
  ![hhtp80](https://user-images.githubusercontent.com/79808404/183903800-2b5d6bff-f882-47d1-81af-e5d941ec8c3a.JPG)
 
 
-### STEP 7
+### STEP 11
    I disabled SELinux with the command below
       
       sudo setenforce 0
@@ -420,7 +425,7 @@ and I granted all permission to webaccess user on tooling database from webserve
          SELinux = disabled
    ![disable selinux](https://user-images.githubusercontent.com/79808404/183872082-01565205-35f1-4fe2-9e85-5cabee60384e.JPG)
       
- ### STEP 8
+ ### STEP 12
    I restarted my Apache to make my configuration take effect with the command below
       
           sudo systemctl restart httpd
@@ -436,7 +441,7 @@ and view if my webserver is communicating to the NFS server by inputing my webse
    ![php lognpage](https://user-images.githubusercontent.com/79808404/183873066-249c0c2d-8250-4796-9f7a-034264fc13f1.JPG)
 
 
-### STEP 9
+### STEP 13
    I updated my webserver configuration to connect to my database in /var/www/html/functions.php file by using vi editor and inputing the scripts below
      
         sudo vi /var/www/html/functions.php
@@ -448,7 +453,7 @@ and view if my webserver is communicating to the NFS server by inputing my webse
   ![function php](https://user-images.githubusercontent.com/79808404/183929442-99c70032-2335-40d5-a040-73ec788ed77d.JPG)
  
    
- ### STEP 10
+ ### STEP 14
  
   I Installed mysql on my Webserver with the command
    
@@ -480,7 +485,7 @@ and view if my webserver is communicating to the NFS server by inputing my webse
  ![mysql restart](https://user-images.githubusercontent.com/79808404/183944678-08ef6cdd-999a-4037-8834-402edb87d0e2.JPG)
    
  
- ### STEP 11
+ ### STEP 15
    I cd into the folder tooling/ in my webserver1
      
          cd tooling/
@@ -494,7 +499,7 @@ and view if my webserver is communicating to the NFS server by inputing my webse
 
   
   
- ### STEP 12
+ ### STEP 16
    In my Mysql database , ran the command below to view my databases
    
      show databases;
@@ -526,7 +531,7 @@ from my Webserver1 I ran the below command to view the configuration in my webse
  
      
   
-  ### STEP 13
+  ### STEP 17
   I opened my web browser and input my webserver1 public IP to view the interface of my application and logon to the application.
   
    ![admin login](https://user-images.githubusercontent.com/79808404/183957335-669a8292-4ac8-4f76-8185-26ade6df3bf9.JPG)
