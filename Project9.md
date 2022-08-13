@@ -128,9 +128,52 @@ and used the command below to check my jenkins status
 ![checking jenkins](https://user-images.githubusercontent.com/79808404/184493506-845f4116-af14-4b24-a742-4aa7eb82002d.JPG)
 
    
+  ### STEP 7
+    
+   The artifacts are stored in my Jenkins server locally by default
+    
+   ![trace the file in terminal](https://user-images.githubusercontent.com/79808404/184493638-4c92ebe6-2237-404c-9e98-70b0cbded884.JPG)
    
    
+   ## CONFIGURE JENKINS TO COPY FILES TO NFS SERVER VIA SSH
    
+ ### STEP 1
+   I installed 'Publish over SSH' plugin from Manage Plugins menu item in Manage Jenkins 
    
+   ![publish over ssh](https://user-images.githubusercontent.com/79808404/184494118-b8b098d0-75cc-44f1-b8c1-57904aa8ca51.JPG)
+
+![plugin upgrade](https://user-images.githubusercontent.com/79808404/184494137-07bd2d5d-35b5-4af8-be31-30f75050041f.JPG)
+
+### STEP 2
+  I configured my Jenkins to connect to my NFS Server from my Configure System menu and navigated to Publish Over SSH section and input the below settngs
+  
+     Provide jenkins server pivate key 
+          
+          
+          ![cat projPem](https://user-images.githubusercontent.com/79808404/184495529-34fb0c5f-335c-40b6-88f9-7506d39aedc8.JPG)
+
+          
+          
+     Arbitrary name
+         NFS
+     
+     Hostname
+         my NFS private IP address
+              
+     Username
+          ec2-user
+     
+     Remote directory
+           /mnt/apps
+
+TCP port 22 on NFS server in my AWS EC2 console is opened
    
+   ![ssh confg success](https://user-images.githubusercontent.com/79808404/184495551-51b64a5b-9f5d-476e-a3a0-58f303017d1a.JPG)
+
+
+
+I configured 'Post Build Action' in my Jenkins project with the below settings
+   
+   ![post build action](https://user-images.githubusercontent.com/79808404/184495560-a7f1d848-f74b-46f5-a5f0-f2d6f90597b7.JPG)
+
  
