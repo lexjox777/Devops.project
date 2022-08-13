@@ -69,4 +69,46 @@ and used the command below to check my jenkins status
 
 ![welcome to jenkins](https://user-images.githubusercontent.com/79808404/184373479-5cc75980-d8bb-42f8-94c9-387ce886533b.JPG)
 
+  
+ ## Configuring Jenkins to retrieve source codes from Github using webhooks
+ 
+ 
+ ### STEP 1
+   I enabled webhook in my Github repository setting
+   
+   ![webhook](https://user-images.githubusercontent.com/79808404/184472405-ebe0112e-2979-4df5-b92c-bafcbf1031b2.JPG)
+
+   ![webhook 3](https://user-images.githubusercontent.com/79808404/184472432-5bae58e7-a9b3-4066-b6d9-02208f9a536e.JPG)
+
+   
+  ### STEP 2
+   I created a freestyle project 'tooling_github' in my Jenkins Console
+        
+     
+ ![freestyle](https://user-images.githubusercontent.com/79808404/184473054-3b5b2ab9-e21a-48ee-9a4a-6589d372284c.JPG)
+  
+   
+  ### STEP 3
+  I connected to my Github repository by copying my repository URL from my github account and input it in my Jenkins freestyle project cinfiguration
     
+   ![repo url](https://user-images.githubusercontent.com/79808404/184473470-e393475e-41b5-42c9-8ddd-e4e8c2b97fc8.JPG)
+
+![jenkin setup](https://user-images.githubusercontent.com/79808404/184473487-08c05171-419b-4800-a33d-f9c882e01815.JPG)
+
+
+### STEP 4
+  I clicked the 'Build Now' button in my Jenkins to see if my configuration works as expected
+ 
+ ![console success](https://user-images.githubusercontent.com/79808404/184474779-47550ca6-ff32-4615-aafe-599e00b1f1aa.JPG)
+
+  
+   
+   
+   
+   
+   
+   
+   
+   
+   
+ 
