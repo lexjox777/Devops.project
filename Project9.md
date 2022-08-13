@@ -102,9 +102,31 @@ and used the command below to check my jenkins status
  ![console success](https://user-images.githubusercontent.com/79808404/184474779-47550ca6-ff32-4615-aafe-599e00b1f1aa.JPG)
 
   
+   ### STEP 5
+    
+   I clicked on configure settings in my jenkins project and add the below configuration is my settings
+    
+       IN Build Triggers
+             Github hook trigger for GITScm polling
+             
+        In Post Build
+              Archive the artifact
+              
+         In Files to Archive
+               **
+          
    
+   ![build triggers](https://user-images.githubusercontent.com/79808404/184493127-eb0f9d8c-1018-4a17-9916-5518ab6ed5e0.JPG)
+
+### STEP 6
    
+   I made some changes in my Github project repository (Readme.md file) and committed the changes , automatically the changes take effect in my Jenkins by the webhook.
    
+   ![build from github](https://user-images.githubusercontent.com/79808404/184493505-ada48a0b-64fb-48d6-8e5a-9e05d4d2bbe8.JPG)
+
+
+![checking jenkins](https://user-images.githubusercontent.com/79808404/184493506-845f4116-af14-4b24-a742-4aa7eb82002d.JPG)
+
    
    
    
