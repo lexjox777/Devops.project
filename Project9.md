@@ -89,7 +89,7 @@ and used the command below to check my jenkins status
   
    
   ### STEP 3
-  I connected to my Github repository by copying my repository URL from my github account and input it in my Jenkins freestyle project cinfiguration
+  I connected to my Github repository by copying my repository URL from my github account and input it in my Jenkins freestyle project configuration
     
    ![repo url](https://user-images.githubusercontent.com/79808404/184473470-e393475e-41b5-42c9-8ddd-e4e8c2b97fc8.JPG)
 
@@ -130,7 +130,7 @@ and used the command below to check my jenkins status
    
   ### STEP 7
     
-   The artifacts are stored in my Jenkins server locally by default
+   I checked the artifacts stored in my Jenkins server locally by default
     
    ![trace the file in terminal](https://user-images.githubusercontent.com/79808404/184493638-4c92ebe6-2237-404c-9e98-70b0cbded884.JPG)
    
@@ -138,7 +138,7 @@ and used the command below to check my jenkins status
    ## CONFIGURE JENKINS TO COPY FILES TO NFS SERVER VIA SSH
    
  ### STEP 1
-   I installed 'Publish over SSH' plugin from Manage Plugins menu item in Manage Jenkins 
+   I installed 'Publish over SSH' plugin from 'Manage Plugins' menu item in Manage Jenkins Tab
    
    ![publish over ssh](https://user-images.githubusercontent.com/79808404/184494118-b8b098d0-75cc-44f1-b8c1-57904aa8ca51.JPG)
 
@@ -170,10 +170,44 @@ TCP port 22 on NFS server in my AWS EC2 console is opened
    
    ![ssh confg success](https://user-images.githubusercontent.com/79808404/184495551-51b64a5b-9f5d-476e-a3a0-58f303017d1a.JPG)
 
+I enabled proxy compactibility in my jenkins configuration
+
+   ![enable proxy compactibility](https://user-images.githubusercontent.com/79808404/184546721-9b5e3379-215a-45f9-8a11-d51e92fc7a6a.JPG)
 
 
 I configured 'Post Build Action' in my Jenkins project with the below settings
    
+     Under Build tab
+        Send build artifacts over SSH
+   
    ![post build action](https://user-images.githubusercontent.com/79808404/184495560-a7f1d848-f74b-46f5-a5f0-f2d6f90597b7.JPG)
+   
+   I updated my Readme.md files in my github repository and confirmed all my configuration works perfectly.
+   
+   
+ ![error solved 2](https://user-images.githubusercontent.com/79808404/184546784-16bbdd80-8041-40bc-964a-811a2a3491ac.JPG)
+
+ 
+ 
+    # CHALLENGES ENCOUNTERED
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
  
