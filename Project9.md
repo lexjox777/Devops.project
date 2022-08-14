@@ -189,15 +189,31 @@ I configured 'Post Build Action' in my Jenkins project with the below settings
 
  
  
-    # CHALLENGES ENCOUNTERED
+   # CHALLENGES ENCOUNTERED
  
  
+ ### I got the error below in my jenkins console when I commited my Readme.md file in my Github repository
+    
+       Error: Exception when publishing, exception message [Permission denied]
  
+ ![Error jenkins](https://user-images.githubusercontent.com/79808404/184546850-8de42e76-5f27-461b-ab1e-b21d0ab3b078.JPG)
+
+ ## Solution 
+   I used the below command to assigned permission to the /mnt directory recursively
+   
+         $ sudo chown -R nobody:nobody /mnt
+         $ sudo chmod -R 777 /mnt
+      
+   
+ ![solution to error](https://user-images.githubusercontent.com/79808404/184547090-3cd7aba1-7811-45e3-93d3-0383934c1b38.JPG)
+
  
+ Then I re-commited my Readme.md file in my Github repository and confirmed the issue is solved. 
  
- 
- 
- 
+ ![Error solved 1](https://user-images.githubusercontent.com/79808404/184547077-9456beba-afe8-4a35-a597-3e4deba5c7bc.JPG)
+
+ ![error solved 2](https://user-images.githubusercontent.com/79808404/184547082-77655025-a092-4a35-b26a-6cd8cb8d3324.JPG)
+
  
  
  
