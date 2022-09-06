@@ -126,7 +126,20 @@ I used the below command to restart my nginx and check the status
  ![sudo restart nginx](https://user-images.githubusercontent.com/79808404/188686812-d4700737-a88d-4731-b7a8-a5026a917657.JPG)
  
    
-   
+ I cd into nginx/sites-enabled and linked my loadbalancer config file to my site enabled so that nginx can access the configuration through it by running the command  below
+      
+      cd /etc/nginx/sites-enabled/
+         &
+      sudo ln -s ../sites-available/load_balancer.conf .
+      
+   ![loadB lnked](https://user-images.githubusercontent.com/79808404/188691920-ca1d5f27-a870-4d98-95f1-2647097b7f9c.JPG)
+
+  
+      
+    
+      
+    
+     
    
    
    
