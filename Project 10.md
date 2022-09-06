@@ -56,8 +56,23 @@ I input my domain name and create hosted zone.
    ![create record2](https://user-images.githubusercontent.com/79808404/188646140-5a7df990-5570-49e2-b110-5a9be835a054.JPG)
 
    
+   ### Step 6
+   I connected my Loadbalancer ssh key on my terminal and ran the command _sudo apt update_ to update all outdated dependacies and _sudo apt install nginx -y_ to install nginx on my loadbalancer server.
    
+      sudo apt update
+      sudo apt install nginx -y
    
+   ![sudo install nginx](https://user-images.githubusercontent.com/79808404/188657856-07d951b5-a713-49da-8795-f64d1f204a05.JPG)
+
+   
+ I used the command below to start nginx and enabled it on my server
+      
+       sudo systemctl enable nginx
+       sudo systemctl start nginx
+       sudo systemctl status nginx
+       
+   ![enble nginx](https://user-images.githubusercontent.com/79808404/188659447-bee40ad5-22d5-4837-9b44-1484c10f6a5e.JPG)
+
    
    
    
