@@ -117,7 +117,14 @@ I input my domain name and create hosted zone.
 
    
    
+I used the below command to restart my nginx and check the status
    
+     sudo systemctl restart nginx
+          &
+     sudo systemctl status nginx
+     
+ ![sudo restart nginx](https://user-images.githubusercontent.com/79808404/188686812-d4700737-a88d-4731-b7a8-a5026a917657.JPG)
+ 
    
    
    
