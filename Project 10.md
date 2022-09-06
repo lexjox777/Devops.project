@@ -101,10 +101,20 @@ I input my domain name and create hosted zone.
 
    
    
+   I used the command below to remove my default site so that my reverse proxy will be redirecting to my newly configuration file.
+     
+        sudo rm -f /etc/nginx/sites-enabled/default
+        
+   ![cap](https://user-images.githubusercontent.com/79808404/188675383-48d152a2-b399-4993-b219-61c0db8f750e.JPG)
+
    
    
-   
-   
+   Then used the below command to test if my configuration is successful
+      
+         sudo nginx -t
+     
+   ![test nginx](https://user-images.githubusercontent.com/79808404/188684773-757421cb-f6fc-44f5-8af6-9c6927939f62.JPG)
+
    
    
    
