@@ -73,8 +73,32 @@ I input my domain name and create hosted zone.
        
    ![enble nginx](https://user-images.githubusercontent.com/79808404/188659447-bee40ad5-22d5-4837-9b44-1484c10f6a5e.JPG)
 
+  ### Step 7
+   I used the command below to vi into my loadbalancer 
+     
+       sudo nano /etc/nginx/sites-available/load_balancer.conf
+       
+   and configured it with the script below by inputing my web1 and web2 Public Ip addresses and my Domain name.
    
-   
+       upstream myproject {
+         server Web1 weight=5;
+         server Web2 weight=5;
+    }
+
+      server {
+         listen 80;
+         server_name www.domain.com;
+         location / {
+           proxy_pass http://myproject;
+      }
+    }
+
+    #comment out this line
+    #       include /etc/nginx/sites-enabled/*;
+        
+        
+   ![loadb conf](https://user-images.githubusercontent.com/79808404/188672254-272053de-a48a-4f61-a5b7-4748e4d51b7b.JPG)
+
    
    
    
