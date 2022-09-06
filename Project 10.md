@@ -13,11 +13,11 @@
 
 
 ### Step 2
- Hosted my domain name on amazon **Route 53** by navigating to the _create hosted zone_ tab
+ Hosted my domain name on AWS **Route 53** by navigating to the _create hosted zone_ tab
  
  ![route 53](https://user-images.githubusercontent.com/79808404/188502539-9bae568d-02d9-4756-a492-7b7dfd28e011.JPG)
 
-I input my domain name and create host zone.
+I input my domain name and create hosted zone.
  
  ![create hosted zone](https://user-images.githubusercontent.com/79808404/188503165-62989e14-2c49-4a77-b3b0-dd4d8cca035e.JPG)
 
@@ -26,3 +26,53 @@ I input my domain name and create host zone.
  
  ### Step 3
   
+   From my domain management tool, I edited the default nameserver to my AWS nameserver.
+   
+   ![create record](https://user-images.githubusercontent.com/79808404/188624422-0ac8fd49-3f22-47df-81fe-dcb21a11c361.JPG)
+
+   
+   ![name server](https://user-images.githubusercontent.com/79808404/188624378-35d65ed7-9cef-4b6b-83bf-c49b28a31398.JPG)
+   
+   
+   ### Step 4
+   From my AWS console I created a new instance _LoadBalancer_  and spinned up the instance
+   
+   ![loadbal](https://user-images.githubusercontent.com/79808404/188635431-b0bb8f46-6b7b-40ed-a8bc-b08fdd58e2ed.JPG)
+   
+   
+   ### Step 5
+   
+   From my **AWS Route 53** I navigated to the _create record_ tab to create 2 records and input my loadbalancer Public IP  address and subdomain 'www'
+   
+   ![create recordd](https://user-images.githubusercontent.com/79808404/188641269-a14d30dd-b5a0-4a5e-8f22-e4cd0e994a38.JPG)
+
+ 
+   ![Ip input](https://user-images.githubusercontent.com/79808404/188642363-a750a996-2d0b-4d0d-a7a4-a4f7dc8eccd2.JPG)
+ 
+ 
+   ![record creatd](https://user-images.githubusercontent.com/79808404/188644179-16663d90-bc68-40b5-b1f1-1a1a716a4dd3.JPG)
+
+   
+   ![create record2](https://user-images.githubusercontent.com/79808404/188646140-5a7df990-5570-49e2-b110-5a9be835a054.JPG)
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
