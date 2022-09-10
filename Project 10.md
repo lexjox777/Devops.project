@@ -34,10 +34,19 @@ I input my domain name and create hosted zone.
    ![name server](https://user-images.githubusercontent.com/79808404/188624378-35d65ed7-9cef-4b6b-83bf-c49b28a31398.JPG)
    
    
+   ![name server changed](https://user-images.githubusercontent.com/79808404/189500797-558c0cf7-1abe-4c92-a453-0da788094a0e.JPG)
+
+   
+   
    ### Step 4
-   From my AWS console I created a new instance _LoadBalancer_  and spinned up the instance
+   From my AWS console I created a new instance _LoadBalancer_  and spinned up the instance with port 80(HTTP) and 443(HTTPS) opened 
    
    ![loadbal](https://user-images.githubusercontent.com/79808404/188635431-b0bb8f46-6b7b-40ed-a8bc-b08fdd58e2ed.JPG)
+   
+   
+   
+   ![port 80 and 443](https://user-images.githubusercontent.com/79808404/189500849-28a5a85d-66de-4687-8bbf-5558ab4bc8a5.JPG)
+
    
    
    ### Step 5
@@ -132,15 +141,73 @@ I used the below command to restart my nginx and check the status
          &
       sudo ln -s ../sites-available/load_balancer.conf .
       
-   ![loadB lnked](https://user-images.githubusercontent.com/79808404/188691920-ca1d5f27-a870-4d98-95f1-2647097b7f9c.JPG)
+ ![loadB lnked](https://user-images.githubusercontent.com/79808404/188691920-ca1d5f27-a870-4d98-95f1-2647097b7f9c.JPG)
+   
+   
+  I used the Ls command to verified my _load_balancer_ linked successfully.
+   
+![load balcr lnk2](https://user-images.githubusercontent.com/79808404/189501961-fed0cbab-d333-4f44-80c3-964f54b92c94.JPG)
 
   
+  I reloaded my nginx with the command below to make my configuration take effect
+  
+      sudo systemctl reload nginx
       
-    
-      
-    
+  
+### Step 8
+
+   I secured my webpage with _cerbot_ by using the command below
      
+         sudo apt install cerbot -y
+         
+   and also I installed a python3 module for my cerbot using the below command
+       
+         sudo apt install python3-certbot-nginx -y
+         
+     
+   ![install certbot](https://user-images.githubusercontent.com/79808404/189502325-1ba3f9d9-1db8-4b95-a442-28391b424cd8.JPG)
+
+      
+   ![certbot and py3 install](https://user-images.githubusercontent.com/79808404/189502328-702eeb42-d964-44d5-9cfa-882f0224f375.JPG)
+ 
+  I used the command below to check my syntax configuration and reload my nginx after the installation
+    
+      sudo nginx -t && sudo nginx -s reload
+    
+    
+  ### Step 9
+    
+   I created a certificate for my domain to secured it with the below command
+       
+         sudo certbot --nginx -d techlect.co.uk -d www.techlect.co.uk 
    
+   ![certificate](https://user-images.githubusercontent.com/79808404/189502759-9aea332d-e36f-4275-b2b7-cc05d747fd80.JPG)
+   
+   ![site secured](https://user-images.githubusercontent.com/79808404/189502767-6cfd0b63-59a3-4735-b958-f28f7f10fbdc.JPG)
+   
+   ![cert for techlect](https://user-images.githubusercontent.com/79808404/189502769-10f4d07b-e7ac-492f-8ad2-26dda7c462e9.JPG)
+
+### Step 10
+  I used the command below to setup my webpage to be able to renewed the certificate each time it expires
+  
+     crontab -e
+     
+   and input the below script in the editor
+     
+       * */12 * * *   root /usr/bin/certbot renew > /dev/null 2>&1
+
+![crontab](https://user-images.githubusercontent.com/79808404/189503121-b8c3d609-9d69-4ce3-8002-8d8481895fa8.JPG)
+
+![crontab2](https://user-images.githubusercontent.com/79808404/189503125-059c2d2a-4305-4cf6-8b4c-f7a739ab6af9.JPG)
+
+
+
+
+   
+
+
+    
+ 
    
    
    
