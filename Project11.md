@@ -23,7 +23,19 @@
       
    ![sudo update](https://user-images.githubusercontent.com/79808404/190899292-025af8ef-f194-4ad6-8503-ed4efd10eabc.JPG)
 
-  
+ ### STEP 4
+   I used the command below to install ansible in my server and checked the version if it was installed successfully
+     
+       sudo apt install Ansible
+           &
+        ansible --verision
+        
+   ![sudo install ansible](https://user-images.githubusercontent.com/79808404/190899684-58fba7b2-53d4-4890-a5c9-d90757addef4.JPG)
+   
+   ![ansible version](https://user-images.githubusercontent.com/79808404/190899694-29be06fb-5d22-4cfa-8967-3c00a28b5eea.JPG)
+
+     
+
   
 
 
