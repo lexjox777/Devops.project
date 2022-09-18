@@ -34,8 +34,40 @@
    
    ![ansible version](https://user-images.githubusercontent.com/79808404/190899694-29be06fb-5d22-4cfa-8967-3c00a28b5eea.JPG)
 
-     
+  ### STEP 5
+   I created a new Freestyle project in my Jenkins and named it _ansible_
+  
+  ![anisble freestyle project](https://user-images.githubusercontent.com/79808404/190907754-c2fb2257-7494-4971-b0b4-bd49aa59a4b9.JPG)
 
+
+  I configured my Jenkins by navigating to Source code management and pointed it to my github repository 'ansible-config-mgt'
+
+  ![source code managemnt](https://user-images.githubusercontent.com/79808404/190909000-618e9d49-1e1d-42b9-b325-c5a6a075472e.JPG)
+
+I navigated to build tiggers and checked the Github hook trigger field
+
+   ![build triggers](https://user-images.githubusercontent.com/79808404/190909779-2c91f2ac-2aa4-473f-8471-185cddac7c9d.JPG)
+
+I navigated to post-build tab and archive my artifact with **
+
+  ![post-build](https://user-images.githubusercontent.com/79808404/190910560-6f4e4309-421c-4fe5-8da1-ec6de07d52cb.JPG)
+
+
+### STEP 6
+  I configured my Github Webhook settings and input my Jenkins url 
+  
+   ![github-webhook](https://user-images.githubusercontent.com/79808404/190910394-bcd416d1-4351-4a46-b4ca-50c252b55c2d.JPG)
+    
+   ![github-webhook2](https://user-images.githubusercontent.com/79808404/190910433-9602b121-40d5-49be-9270-0bf81b28ad58.JPG)
+
+    
+  ### STEP 7
+   I Test if my configuration works as expected by commit a change in my Readme Github accoubt and check if my jenkins automatically detected the changes.
+   
+   ![jenkins test](https://user-images.githubusercontent.com/79808404/190910733-0c6bdc42-dfe0-4882-97e4-bd8ab56bedfe.JPG)
+
+
+    
   
 
 
