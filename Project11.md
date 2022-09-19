@@ -99,7 +99,7 @@ I navigated to post-build tab and archive my artifact with **
 ![mkdir playbook](https://user-images.githubusercontent.com/79808404/191039505-ad2e860b-4646-4f3e-aa65-59166a77cdf1.JPG)
 
 ### Step 6
-  I created new files in my inventory folder and named them dev.yml, staging.yml, uat.yml and prod.yml
+  I created new files for each of my Environment in my inventory folder and named them dev.yml, staging.yml, uat.yml and prod.yml
   Also created a new file in my playbooks folder and named it common.yml
   
   ![create new files in inventory](https://user-images.githubusercontent.com/79808404/191039904-4e7b4a55-e04e-433c-aea4-ffc8e20977d6.JPG)
