@@ -62,13 +62,48 @@ I navigated to post-build tab and archive my artifact with **
 
     
   ### STEP 7
-   I Test if my configuration works as expected by commit a change in my Readme Github accoubt and check if my jenkins automatically detected the changes.
+   I ran a Test to check if my configuration works as expected by committing a change in my Readme.md Github account and check if my jenkins automatically detected the changes.
    
    ![jenkins test](https://user-images.githubusercontent.com/79808404/190910733-0c6bdc42-dfe0-4882-97e4-bd8ab56bedfe.JPG)
 
 
+## Preparing development environment in my Visual Studio Code
+ 
+ ### Step 1
+   I installed a _remote development extension_ in my VSC  
+ 
+ ![remote dev ext](https://user-images.githubusercontent.com/79808404/191036066-22f2c5f6-3326-4831-9980-aed33660434b.JPG)
+
+  ### Step 2
+   I created a clone repository of my github in my VSC
     
+  ![clone repo](https://user-images.githubusercontent.com/79808404/191036750-22b474e3-8ffa-4efa-8181-a3ac5ce877d8.JPG)
   
+  ![cloned repo in vsc](https://user-images.githubusercontent.com/79808404/191037078-aefbc143-75ba-461f-97b2-7c617654d8bc.JPG)
+
+  
+### Step 3
+  I checked the github branch in my VS Code
+  
+ ![git branch](https://user-images.githubusercontent.com/79808404/191038130-86106763-75b2-46e4-97f1-51731603f6ce.JPG)
+
+### Step 4
+   I created a new branch and named it prj 11
+  
+ ![git new branch](https://user-images.githubusercontent.com/79808404/191039006-0975593a-175b-4daf-b46b-b9b5ae2f6249.JPG)
+
+ 
+### Step 5
+   I created new directories in my ansible-config-mgt folder and named them _playbooks_ and _inventory_
+
+![mkdir playbook](https://user-images.githubusercontent.com/79808404/191039505-ad2e860b-4646-4f3e-aa65-59166a77cdf1.JPG)
+
+### Step 6
+  I created new files in my inventory folder and named them dev.yml, staging.yml, uat.yml and prod.yml
+  
+  ![create new files in inventory](https://user-images.githubusercontent.com/79808404/191039904-4e7b4a55-e04e-433c-aea4-ffc8e20977d6.JPG)
+
+ 
 
 
   
