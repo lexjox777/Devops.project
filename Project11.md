@@ -100,6 +100,7 @@ I navigated to post-build tab and archive my artifact with **
 
 ### Step 6
   I created new files in my inventory folder and named them dev.yml, staging.yml, uat.yml and prod.yml
+  Also created a new file in my playbooks folder and named it common.yml
   
   ![create new files in inventory](https://user-images.githubusercontent.com/79808404/191039904-4e7b4a55-e04e-433c-aea4-ffc8e20977d6.JPG)
 
