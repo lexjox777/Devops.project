@@ -104,7 +104,83 @@ I navigated to post-build tab and archive my artifact with **
   
   ![create new files in inventory](https://user-images.githubusercontent.com/79808404/191039904-4e7b4a55-e04e-433c-aea4-ffc8e20977d6.JPG)
 
+ ## Settling up Ansible Inventory
  
+ ### Step 1
+   I installed OpenSSH using PowerShell and ran the Powershell as an administrator and input the below command 
+    
+      Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+     
+   and used the below command to Instaled  the _Not Present OpenSSH Server _
+   
+       Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0
+         
+  ![Add ssh powershell](https://user-images.githubusercontent.com/79808404/192166975-0e6d0d94-7e56-4d29-a403-7d8983c6e7f9.JPG)
+
+  I confirmed if the OpenSSH server is installed as expected with the command 
+   
+        Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+        
+   ![installed ssh](https://user-images.githubusercontent.com/79808404/192167286-9c634e54-f140-4c2a-a45d-0ea2dc76a8c1.JPG)
+
+ 
+ ### Step 2
+   I used the below command to start and configured OPenSSH Server for intial use.
+   
+       # Start the sshd service
+         Start-Service sshd
+
+       # OPTIONAL but recommended:
+         Set-Service -Name sshd -StartupType 'Automatic'
+
+       # Confirm the Firewall rule is configured. It should be created automatically by setup. Run the following to verify
+       if (!(Get-NetFirewallRule -Name "OpenSSH-Server-In-TCP" -ErrorAction SilentlyContinue | Select-Object Name, Enabled)) {
+    Write-Output "Firewall Rule 'OpenSSH-Server-In-TCP' does not exist, creating it..."
+    New-NetFirewallRule -Name 'OpenSSH-Server-In-TCP' -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+    } else {
+    Write-Output "Firewall rule 'OpenSSH-Server-In-TCP' has been created and exists."
+    }
+ 
+ ![start ssh service](https://user-images.githubusercontent.com/79808404/192167311-a50c8db5-b37d-43da-b37c-d744aa827589.JPG)
+
+  ### Step 3
+  I generated key files using the Ed25519 algorithm by running the below command from my powershell
+      
+      ssh-keygen -t ed25519
+      
+ ![ssh keygen](https://user-images.githubusercontent.com/79808404/192167776-cd739546-0e25-4e63-8a7d-4bf6659abf34.JPG)
+
+      
+   ### Step 4
+   I ran the below command to start my SSH command each time my system is rebooted 
+       
+     # This starts the ssh-agent automatically
+        Get-Service ssh-agent | Set-Service -StartupType Automatic  
+       
+     # Start the service
+        Start-Service ssh-agent
+
+     # This should return a status of Running
+       Get-Service ssh-agent
+       
+   ![ssh agent running](https://user-images.githubusercontent.com/79808404/192168014-b4c7cc31-c11d-4c47-a742-10b335a49518.JPG)
+
+   and ran the command below to add my private key to my ssh agent
+   
+     ssh-add Projects.pem
+  
+  ![ssh add projectPem](https://user-images.githubusercontent.com/79808404/192168203-0610c744-ce3d-419d-bb27-a0be8d80ee73.JPG)
+  
+  ### Step 5
+   I confirmed my private key has been added by running the command below
+     
+       ssh-add -l
+   
+  ![ssh add -l](https://user-images.githubusercontent.com/79808404/192168535-99faacd8-ad8e-413f-989c-8043c2f09cdc.JPG)
+   
+
+      
+   
 
 
   
