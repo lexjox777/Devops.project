@@ -178,8 +178,15 @@ I navigated to post-build tab and archive my artifact with **
    
   ![ssh add -l](https://user-images.githubusercontent.com/79808404/192168535-99faacd8-ad8e-413f-989c-8043c2f09cdc.JPG)
    
+ ###  Step 6
+   
+   I ssh into my jenkins-ansible server using ssh-agent
+   
+     ssh -A ubuntu@(my jenkin-ansible public-ip)
+  
+ ![connect to ssh instance 2tru IP](https://user-images.githubusercontent.com/79808404/192168716-e3050d3b-d16b-4af5-af9c-7caac4aa2336.JPG)
 
-      
+   
    
 
 
