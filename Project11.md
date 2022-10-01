@@ -185,6 +185,25 @@ I navigated to post-build tab and archive my artifact with **
      ssh -A ubuntu@(my jenkin-ansible public-ip)
   
  ![connect to ssh instance 2tru IP](https://user-images.githubusercontent.com/79808404/192168716-e3050d3b-d16b-4af5-af9c-7caac4aa2336.JPG)
+ 
+ 
+ ### Step 7
+  
+   I launched 4 new Redhat 8 instances ( NFS, DB, Webserver-1, Webserver-2) and an Ubuntu 20.01 instance (Load Balancer)
+   
+   ![redhat instance](https://user-images.githubusercontent.com/79808404/193419847-f93a5016-035e-404f-990b-a6d3574c3694.JPG)
+
+![LB](https://user-images.githubusercontent.com/79808404/193419852-1a5ce7b5-8d56-451a-be86-d78175928ef9.JPG)
+
+![instance2](https://user-images.githubusercontent.com/79808404/193419854-2c373676-1ba4-4f33-9b94-f9df704a83ac.JPG)
+
+### Step 8
+  I ssh into my NFS server using my NFS Public IP 
+  
+  ![nfs ssh](https://user-images.githubusercontent.com/79808404/193419951-789a7c77-1695-4e79-9e31-41e3ef0fb7e5.JPG)
+
+  
+
 
    
    
