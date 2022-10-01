@@ -258,5 +258,20 @@ I navigated to post-build tab and archive my artifact with **
    ![commonYML](https://user-images.githubusercontent.com/79808404/193420922-f5e0ad33-c8e8-4016-9aec-59fff5afced6.JPG)
 
 
+### Step 3
+  I update my Git to commit and push my directories and files to my GitHub by using the command below
+     
+       git status
+
+       git add .
+       
+       git commit -m 'updated files'
+       
+  ![git status](https://user-images.githubusercontent.com/79808404/193422012-572eec19-4893-4d36-a5b2-723d1539d529.JPG)
+
+![git commit](https://user-images.githubusercontent.com/79808404/193422017-e3c8d1c7-566e-47e1-b915-41987151e06f.JPG)
+
+  
+  
 
   
