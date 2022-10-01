@@ -271,7 +271,51 @@ I navigated to post-build tab and archive my artifact with **
 
 ![git commit](https://user-images.githubusercontent.com/79808404/193422017-e3c8d1c7-566e-47e1-b915-41987151e06f.JPG)
 
+ I ran the command _git status_ to check if all my files commited successfully
+   
+  ![notin to commit](https://user-images.githubusercontent.com/79808404/193422276-575518c2-2282-40c6-b8f5-0874c2205623.JPG)
   
   
+  ### Step 4
+    
+   I pushed my commited files to my GitHub with the below command
+      
+       git push origin prj-11
+       
+   ![git push](https://user-images.githubusercontent.com/79808404/193424585-2c7b4d89-a2cc-4ab1-9331-c6c92221d320.JPG)
+   
+  ### Step 5
+  
+   I confirmed my files were successfully pushed to my Github account 
+   
+   ![pushed to github](https://user-images.githubusercontent.com/79808404/193425159-da6f021a-9a34-4951-8b73-e1a2ab34435f.JPG)
+
+and I created a pull request from my Github account and merged pull request
+
+   ![open a pull request](https://user-images.githubusercontent.com/79808404/193425374-0b4d40a9-cf38-4c0e-b117-1ecd8edc2074.JPG)
+
+   
+   ![merge pull request](https://user-images.githubusercontent.com/79808404/193425384-88931495-5022-45b4-a105-d7c3148acd7c.JPG)
+
+   
+   ![pull request merged](https://user-images.githubusercontent.com/79808404/193425396-be8698df-7ce6-4162-a854-63e1ed676aa2.JPG)
+
+![pull request confirmed](https://user-images.githubusercontent.com/79808404/193426126-5a5a92ac-313d-4509-97fb-be2721d40221.JPG)
+
+
+### Step 6
+ 
+   I confirmed my ansible was able to communicate with my Github by verifying that my ansible build was updated as expected.
+   
+   ![confirmed ansible updated request](https://user-images.githubusercontent.com/79808404/193426238-a045310f-bb54-4d6d-942b-e95c1e31ce1b.JPG)
+
+    
+### Step 7
+
+  I used the below code to checkout my Git to the main branch
+   
+      git checkout main
+      
+![git checkout](https://user-images.githubusercontent.com/79808404/193426752-4ad9f4c2-dac0-4bd7-8108-29903b76c5f8.JPG)
 
   
