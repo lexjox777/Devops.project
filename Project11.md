@@ -318,4 +318,49 @@ and I created a pull request from my Github account and merged pull request
       
 ![git checkout](https://user-images.githubusercontent.com/79808404/193426752-4ad9f4c2-dac0-4bd7-8108-29903b76c5f8.JPG)
 
+
+
+
+
+
+
+
+
+
+
+### Step 8
+   I confirmed that my build artifacts was saved as expected in my Jenkins-ansible server with the command below
+  
+            /var/lib/jenkins/jobs/ansible/builds/8/archive/
+            
+  ![sudo ls var lib](https://user-images.githubusercontent.com/79808404/194777425-4c7944f1-da90-48be-8721-e9e771a20e79.JPG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
