@@ -320,14 +320,6 @@ and I created a pull request from my Github account and merged pull request
 
 
 
-
-
-
-
-
-
-
-
 ### Step 8
    I confirmed that my build artifacts was saved as expected in my Jenkins-ansible server with the command below
   
@@ -336,9 +328,120 @@ and I created a pull request from my Github account and merged pull request
   ![sudo ls var lib](https://user-images.githubusercontent.com/79808404/194777425-4c7944f1-da90-48be-8721-e9e771a20e79.JPG)
 
 
+## _Run Ansible Test_
+
+### Step 9
+  I updated my ssh config file with the script below
+  
+         Host jenkins-ansible
+            HostName 13.41.104.110
+            User ubuntu
+            IdentityFile /Users/Dell/Downloads/Projects.pem
+            ForwardAgent yes
+            ControlPath /tmp/ansible-ssh-%h-%p-%r
+            ControlMaster auto
+            ControlPersist 10m
+            
+   ![Screenshot (9)](https://user-images.githubusercontent.com/79808404/195994348-75847b2d-68bf-409e-9866-595df5d6ee5e.png)
+    
+   ![config](https://user-images.githubusercontent.com/79808404/195994628-0541f34c-f3d0-4471-84e7-d71ea52f8165.JPG)       
+    
+
+### Step 10
+   I conected to my remote server from my jenkins-ansible terminal and _conected to host_ by ssh using my jenkins public Ip
+     
+        ssh ubuntu@ <my jenkins-ansible public Ip>
+          
+![jenkin connect to host](https://user-images.githubusercontent.com/79808404/195993138-62473416-0f83-4f57-9bc1-088462ead8a2.JPG)
+
+### Step 11
+  In my ssh: jenkins-ansible remote server I opened my ubuntu folder
+  
+   ![open folder ubuntu](https://user-images.githubusercontent.com/79808404/195994999-321e8dd6-cce5-4ac3-ac94-96563f4d9dc9.JPG)
+
+
+### Step 12
+   I ran my ansible-playbook using the command below
+   
+      ansible-playbook -i /var/lib/jenkins/jobs/ansible/builds/<build number>/archive/inventory/dev.yml /var/lib/jenkins/jobs/ansible/builds/<build number>/archive/playbooks/common.yml
+     
+        
+   ![run ansible-playbook](https://user-images.githubusercontent.com/79808404/195995571-d71e6336-131b-4851-a322-142b3ce9d224.JPG)
+   
+### Step 13
+  
+   I confirmed wireshark is installed on my servers as instructed by ssh into each server using private ip address
+     
+        ssh ec2-user@<nfs-private-ip>
+        
+        ssh ec2-user@<webserver1-private-ip>
+        
+        ssh ec2-user@<webserver2-private-ip>
+        
+        ssh ec2-user@<db-private-ip>
+        
+        ssh ubuntu@<LB-private-ip>
+        
+   ![webserver 1 confirmd](https://user-images.githubusercontent.com/79808404/195996290-8e1777ad-119b-43db-8a48-c4661e3271d0.JPG)
+   
+   
+   ![webserver 2 confirmd](https://user-images.githubusercontent.com/79808404/195996297-ac527a1c-f5c0-4ee7-a971-8c438d8c6fba.JPG)
+
+
+![db server confirmed](https://user-images.githubusercontent.com/79808404/195996308-f9883eed-e798-4c33-b134-ce23cd8ed001.JPG)
+
+
+![nfs server confirmd](https://user-images.githubusercontent.com/79808404/195996351-f08e82c4-0e74-4e29-936e-748e53106850.JPG)
 
 
 
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+     
+   
+        
+   
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+  
+
+
+  
+     
+     
+  
+  
+  
 
 
 
