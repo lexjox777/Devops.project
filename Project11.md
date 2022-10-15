@@ -395,13 +395,83 @@ and I created a pull request from my Github account and merged pull request
 
 
 
+   
+ ##  **I updated my ansible playbook with a new ansible task and go through the whole cycle again**
+  
+### Step 14     
+     
+   I checkout from my Git main to Git prj-11 and added the below script in my ansible common.yml file, commit and push the changes to my GitJub account.
+     
+     
+     - name: create directory, file and set timezone on all servers
+       hosts: webserver, nfs, db, lb
+       become: yes
+       tasks: 
+
+          - name: create a directory
+            file: 
+              path: /home/sample
+              state: directory
+
+          - name: create a file
+            file:
+              path: /home/sample/ansible.txt
+              state: touch
+
+          - name: set timezone
+            timezone:
+              name: Africa/Lagos
+   
+
+   ![git add more task](https://user-images.githubusercontent.com/79808404/195998691-4085b3bd-0775-4a72-8b3c-0d64a2839ffe.JPG)
+
+### Step 15
+  
+  I confirmed in my Github account that the file was pushed as expected and created a pull request and merged the request.
+ 
+   ![git push confrim](https://user-images.githubusercontent.com/79808404/195998917-c3efe719-c2ce-42b8-95e8-78c933107ed3.JPG)
+
+
+   ![cmpare and pull request](https://user-images.githubusercontent.com/79808404/195998923-f6f3a4ac-5044-4aa2-835c-899124369c3e.JPG)
+
+
+   ![merge pull request](https://user-images.githubusercontent.com/79808404/195998930-3cc0e9af-7f08-44e3-8a57-5663a50edfbb.JPG)
+
+
+![pull request merged](https://user-images.githubusercontent.com/79808404/195998946-b279d2a4-5143-4d61-8ef7-783bcf36e0e8.JPG)
+
+   
+ ### Step 16
+  
+   I confirmed in my jenkins account that the files was successfully pushed
+   
+   
+   ![jenkin more tasks added](https://user-images.githubusercontent.com/79808404/195999245-f510aa2e-0b6f-4880-8839-ffbe32103982.JPG)
+   
+ ### Step 17
+  I ran my ansible playbook with the command
+  
+    
+  ![ansible playbook more task](https://user-images.githubusercontent.com/79808404/195999539-6757eec2-0434-41f0-9e66-66ae89e153e9.JPG)
+
+
+### Step 18
+  I confirmed that the task was carried out as expected  in my servers by ssh into my servers using the private ips and confirmed that both directory and files are created.
+  
+      ssh ec2-user@<Nfs-private-server-IP>
+      
+      ssh ubuntu@<LB-private-server-IP>
+      
+  
+    
+   ![nfs server sample file](https://user-images.githubusercontent.com/79808404/195999910-c5df1d0f-0273-4e31-b518-8f071da30fb8.JPG)
+
+
+![LB server sample file](https://user-images.githubusercontent.com/79808404/195999914-2225678b-0b29-42b5-8a61-e325e8b068d2.JPG)
 
    
    
-   
-   
-   
-   
+
    
    
    
