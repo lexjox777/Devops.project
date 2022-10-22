@@ -83,15 +83,48 @@
   
   ![host all](https://user-images.githubusercontent.com/79808404/197345218-322fb5ff-4aca-4fd1-91ee-9f17604307df.JPG)
 
+### Step 8
+  In my static-assignment folder i created a new file (common-del.yml) and input the below task to delete wireshark utilities from all servers
+     
+   
+      ---
+      - name: update web, nfs and db servers
+        hosts: webservers, nfs, db
+        remote_user: ec2-user
+        become: yes
+        become_user: root
+        tasks:
+        - name: delete wireshark
+          yum:
+            name: wireshark
+            state: removed
+
+      - name: update LB server
+        hosts: lb
+        remote_user: ubuntu
+        become: yes
+        become_user: root
+        tasks:
+        - name: delete wireshark
+          apt:
+            name: wireshark-qt
+            state: absent
+            autoremove: yes
+            purge: yes
+            autoclean: yes
+   
+   
+   ![new task](https://user-images.githubusercontent.com/79808404/197345777-c47f822c-e8b6-4d9a-b297-3c4fef9ba099.JPG)
+
+  
+ ### I committed and pushed the update to my github and confirmed it works as expected.
+   
+   
+  ![new task commit](https://user-images.githubusercontent.com/79808404/197346312-dba66bba-db17-4e8e-ba0d-0c0b11d49d36.JPG)
 
    
-   
-   
-   
-   
-   
-   
-   
+  ![pushed task](https://user-images.githubusercontent.com/79808404/197346534-b8fbd3ff-9d7e-4e11-9a61-2fbd2119ece1.JPG)
+
    
    
    
