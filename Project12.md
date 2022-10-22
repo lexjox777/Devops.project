@@ -66,11 +66,24 @@
   ![save artifact in jenkins](https://user-images.githubusercontent.com/79808404/197342843-4adb36d2-a5e6-4321-a549-1e2b22bc970d.JPG)
 
    
+## Step 6
+  Created a new file (**site.yml**) in my playbooks directory and also created a new directory (**static-assignments**) in my ansible-config-mgt
+  
+   ![new file](https://user-images.githubusercontent.com/79808404/197344718-0fb5e7f4-98b2-4cc7-81ba-4260e5846bed.JPG)
+
    
-   
-   
-   
-   
+### Step 7
+  I moved common.yml file from my playbooks folder to the newly created static-assignments folder and input the below code to import playbook from static-assignment/common.yml
+  
+       ---
+       - hosts: all
+       - import_playbook: ../static-assignments/common.yml
+  
+  ![moved common](https://user-images.githubusercontent.com/79808404/197344931-6492e33a-1dae-4bc4-a31f-d27a76f334ed.JPG)
+  
+  ![host all](https://user-images.githubusercontent.com/79808404/197345218-322fb5ff-4aca-4fd1-91ee-9f17604307df.JPG)
+
+
    
    
    
