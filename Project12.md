@@ -117,7 +117,7 @@
    ![new task](https://user-images.githubusercontent.com/79808404/197345777-c47f822c-e8b6-4d9a-b297-3c4fef9ba099.JPG)
 
   
- ### I committed and pushed the update to my github and confirmed it works as expected.
+ ### I committed and pushed the update to my github and confirmed the changes took effect in my remote server as expected.
    
    
   ![new task commit](https://user-images.githubusercontent.com/79808404/197346312-dba66bba-db17-4e8e-ba0d-0c0b11d49d36.JPG)
