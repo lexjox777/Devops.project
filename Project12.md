@@ -126,6 +126,37 @@
   ![pushed task](https://user-images.githubusercontent.com/79808404/197346534-b8fbd3ff-9d7e-4e11-9a61-2fbd2119ece1.JPG)
 
    
+ ### Step 9
+   I updated my **site.yml** file and changed **common.yml** to **common-del.yml**  and used the below code to ping my configuration 
+   
+     ansible all -m ping
+     
+     
+   ![ping ansible](https://user-images.githubusercontent.com/79808404/197422421-c176dcb7-7176-4fbb-8a59-8af1bbcadf63.JPG)
+ 
+   
+   and ran my **ansible-playbook** with the code below
+     
+      ansible-playbook -i /home/ubuntu/ansible-config-artifact/inventory/dev.yml /home/ubuntu/ansible-config-artifact/playbooks/site.yml
+     
+   ![run playbook del wireshark](https://user-images.githubusercontent.com/79808404/197422222-7997ac24-14f8-4ba2-b48c-59b640ab1fa9.JPG)
+
+
+### Step 10
+  I ssh into all my servers from my jenkins-ansible remote server and confirmed wireshark is deleted as expected
+ 
+ ![wireshark del](https://user-images.githubusercontent.com/79808404/197422552-1f1c7771-83ea-487d-96d3-3e71dbc6475a.JPG)
+
+
+![wireshrk del 2](https://user-images.githubusercontent.com/79808404/197422559-81a2c13b-a2b1-430a-9ffc-17dbdaa1bcdd.JPG)
+
+     
+  
+      
+  
+   
+      
+  
    
    
    
