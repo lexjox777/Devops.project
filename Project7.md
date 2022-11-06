@@ -192,8 +192,7 @@ and used the command _lsblk_ to view if my disk is configured as expected
      sudo chmod -R 777 /mnt/apps
      sudo chmod -R 777 /mnt/logs
      sudo chmod -R 777 /mnt/opt
-  
- 
+     
  ### STEP 16
    I restarted my NFS Server after configuration with the command below
    
@@ -210,11 +209,18 @@ and used the command _lsblk_ to view if my disk is configured as expected
       
    and input the below command
      
-       /mnt/apps 172.31.80.0/20(rw,sync,no_all_squash,no_root_squash)
+       /mnt/apps <Subnet-CIDR>(rw,sync,no_all_squash,no_root_squash)
       /mnt/logs 172.31.80.0/20(rw,sync,no_all_squash,no_root_squash)
       /mnt/opt 172.31.80.0/20(rw,sync,no_all_squash,no_root_squash)    
    
    ![vi cidr](https://user-images.githubusercontent.com/79808404/183699419-f58dc0cb-edb2-4340-9bc9-f43d767e5d47.JPG)
+   
+   used the command below to export the mount point for the webserver to be able to connect by running
+     
+      sudo exportfs -arv
+   
+   ![Pro 7 sudo exportfs](https://user-images.githubusercontent.com/79808404/200180679-22e38909-9997-482d-af4b-2f8fde87be4a.JPG)
+
 
 ### STEP 18
   I used the below command to check the port NFS is running on
