@@ -3,7 +3,9 @@
  ## Project scope and architecture
   
   ![project arch](https://user-images.githubusercontent.com/79808404/197327592-9b79d643-7903-43b1-b2bf-380220030d5d.JPG)
-
+      
+         **Tasks**
+          _** To use the import_playbook module as a ready solution to install or delete packages on multiple servers just with a single command.**_
 
 ## _Jenkins Job Enhancement_
 
@@ -151,15 +153,61 @@
 ![wireshrk del 2](https://user-images.githubusercontent.com/79808404/197422559-81a2c13b-a2b1-430a-9ffc-17dbdaa1bcdd.JPG)
 
 ### Step 11
-  i created a new git branch _refactor_ 
+  I created a new git branch _refactor_ 
       
       git checkout -b refactor
   
   ![git branch](https://user-images.githubusercontent.com/79808404/200199754-3e8230f2-5e6b-4972-8d78-64e8f813dad9.JPG)
 
       
- 
+ **## Configure UAT Webservers with a Role 'Webserver'**
+  
+  I created two new Ec2 Instances using RHEL 8 in my AWS console and named them web1-UAT and web2-UAT 
+  
+  
+  I updated my ansible-config-mgt with a folder 'webserver' and created the files below in the webserver folder.
+  
+      └── webserver
+       ├── README.md
+       ├── defaults
+       │   └── main.yml
+       ├── handlers
+       │   └── main.yml
+       ├── meta
+       │   └── main.yml
+       ├── tasks
+       │   └── main.yml
+       └── templates
+  
+      
+   ![new folders webservr](https://user-images.githubusercontent.com/79808404/200300611-896af8cc-0625-41a6-abdc-fbb4a47909c1.JPG)
+
+ ### Step 2 
+  I updated my inventory _ansible-config-mgt/inventory/uat.yml_ file with the Private Ip addresses of the web1-UAT and web2-UAT servers created.
+  
+    [uat-webservers]
+      <Web1-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user' 
+
+      <Web2-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user'
+     
+  ![web-uat](https://user-images.githubusercontent.com/79808404/200302042-130cb777-a1fa-471b-a672-b5ed7aa5b983.JPG)
+
+
+ ### Step 3
+   In /etc/ansible/ansible.cfg file I uncomment _roles_path_ and provided full path to my roles directory by updating _roles_path = /home/ubuntu/ansible-config-mgt/roles_ so that ansible could know where to find configured roles.
    
+
+     vi /etc/ansible/ansible.cfg
+     
+ ![vi ansible](https://user-images.githubusercontent.com/79808404/200305369-d7f966ae-7817-449c-8eb6-eb5be26c24d6.JPG)
+
+ 
+ ![roles path](https://user-images.githubusercontent.com/79808404/200305292-2569fa7e-8e7c-47f6-8369-dacd45f1c62e.JPG)
+ 
+      roles_path = /home/ubuntu/ansible-config-mgt/roles
+
+  ![role path changed](https://user-images.githubusercontent.com/79808404/200305308-dc4737f7-5310-47cd-b462-8ff89a4772df.JPG)
+
       
   
    
