@@ -294,13 +294,28 @@
 
 ![pull request merged](https://user-images.githubusercontent.com/79808404/200316877-d02a2c4b-8374-487f-934b-b7ff2600a816.JPG)
 
+![git checkout main](https://user-images.githubusercontent.com/79808404/200322333-32169873-97c2-4e51-a6d9-97426f1b9796.JPG)
+
+
+ ### Step 8
+  I used the Ping Command to ping my configuration to be sure they are responding as expected
+    
+      ansible uat-webserver -m ping
+      
+  
+   ![ansible ping](https://user-images.githubusercontent.com/79808404/200320770-0219cb25-22e0-4e14-85d9-b8863922d745.JPG)
+
+ ### Step 9
+   I finally ran my playbook against my uat inventory with the command below
+     
+     ansible-playbook -i /home/ubuntu/ansible-config-artifact/inventory/uat.yml /home/ubuntu/ansible-config-artifact/playbooks/site.yml 
    
    
-   
-   
-   
-   
-   
+ ![task 1](https://user-images.githubusercontent.com/79808404/200321741-ccb3aae9-5062-4408-85b3-9cb3c7ae32de.JPG)
+
+
+ ![run task](https://user-images.githubusercontent.com/79808404/200321760-2e165f2a-ffe4-407f-94fe-52aab685aece.JPG)
+
 
     
     
