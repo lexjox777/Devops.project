@@ -252,4 +252,59 @@
    
   ![new task add](https://user-images.githubusercontent.com/79808404/200307692-a316600e-25e1-420e-90dc-91c00e3f18f5.JPG)
 
+
+## **Referencing webserver role**
+ ### Step 5
+   I created a new assignment by creating a new file _uat-webservers.yml_ within the static-assignment folder and referenced the role in it.
+    
+      ---
+      - hosts: uat-webservers
+        roles:
+           - webserver
+   
+  ![role ref](https://user-images.githubusercontent.com/79808404/200311924-5f281fef-f7a6-4f60-ac87-27122b9fe43a.JPG)
+      
+  ### Step 6
+  I referenced my uat-webserver.yml role inside site.yml file with the code below
+  
+     ---
+    - hosts: all
+    - import_playbook: ../static-assignments/common.yml
+
+    - hosts: uat-webservers
+    - import_playbook: ../static-assignments/uat-webservers.yml
+    
+    
+  ![site yml update](https://user-images.githubusercontent.com/79808404/200314138-b684bfe6-76f4-4cd2-9c5d-eef975d295f5.JPG)
+
+   ## Commit and Test the Configuration 
+### Step 7
+  I commited my changes and created a pull request and merged them to the main branch. I confirmed my webhook triggered the consequent push in my Jenkins console and also copied all the files to my Jenkins-Ansible server _/home/ubuntu/ansible-config-mgt/_ directory.
+  
+   ![git status and push](https://user-images.githubusercontent.com/79808404/200316737-e669a2a6-94be-4fe6-882b-7cc88073cc5c.JPG)
+
+   ![refactor github](https://user-images.githubusercontent.com/79808404/200316755-65265ce4-b23d-40fc-aaaa-72e28364a651.JPG)
+   
+   
+   ![create pull request](https://user-images.githubusercontent.com/79808404/200316818-d954548a-08bc-46f3-863b-37ecb92fdea6.JPG)
+
+
+![merge request](https://user-images.githubusercontent.com/79808404/200316858-196915cf-9fc9-4bdd-baa3-341d4a6c3726.JPG)
+
+
+![pull request merged](https://user-images.githubusercontent.com/79808404/200316877-d02a2c4b-8374-487f-934b-b7ff2600a816.JPG)
+
+   
+   
+   
+   
+   
+   
+   
+
+    
+    
+    
+    
+    
    
