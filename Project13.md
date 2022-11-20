@@ -93,12 +93,22 @@ Step 6
 Step 7
   
   I commited the changes to my Github 
-  
-  
-
+    
 ![7 - git add update](https://user-images.githubusercontent.com/79808404/201156185-749d9a11-39e1-4837-af84-a541316141e7.JPG)
 
+# Step 8
+  I installed mysql role from ansible-galaxy community with the below command
+    
+     ansible-galaxy install geerlingguy.mysql
+     
+   ![1  mysql role](https://user-images.githubusercontent.com/79808404/202915076-62e85a70-d9f4-449e-b113-3dc34f4bf9ef.JPG)
 
+
+![2  mysql role](https://user-images.githubusercontent.com/79808404/202915082-f11d812f-828e-47fc-8dd4-d945ed8fb8f9.JPG)
+
+
+
+![3 mysql role created](https://user-images.githubusercontent.com/79808404/202915090-b04127eb-f336-49e6-b0f0-201f77ea6b92.JPG)
 
 
 
