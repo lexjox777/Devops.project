@@ -101,6 +101,10 @@ Step 7
     
      ansible-galaxy install geerlingguy.mysql
      
+  and moved the file to a mysql folder within the role folder with the command below
+  
+      mv geerlingguy.mysql/ mysql
+     
    ![1  mysql role](https://user-images.githubusercontent.com/79808404/202915076-62e85a70-d9f4-449e-b113-3dc34f4bf9ef.JPG)
 
 
@@ -109,6 +113,44 @@ Step 7
 
 
 ![3 mysql role created](https://user-images.githubusercontent.com/79808404/202915090-b04127eb-f336-49e6-b0f0-201f77ea6b92.JPG)
+
+# Step 9
+I uncomment and edited _mysql_database and mysql_users configuration_ setting in _main.yml_ file within the default folder of the **roles directory**.
+
+    # Databases.
+    mysql_databases: []
+      - name: tooling
+        collation: utf8_general_ci
+        encoding: utf8
+        replicate: 1
+
+    # Users.
+    mysql_users: []
+     - name: webaccess
+       host: 0.0.0.0
+       password: secret
+       priv: '*.*:ALL,GRANT'
+
+![edit rol](https://user-images.githubusercontent.com/79808404/202916158-36d2a85d-da5a-4f3f-8de1-5d47f83b7f3d.JPG)
+
+
+![edit role2](https://user-images.githubusercontent.com/79808404/202916901-b4cf66d9-65c8-474c-bf4e-8bfbae47231d.JPG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
