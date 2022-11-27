@@ -136,11 +136,31 @@ I uncomment and edited _mysql_database and mysql_users configuration_ setting in
 
 ![edit role2](https://user-images.githubusercontent.com/79808404/202916901-b4cf66d9-65c8-474c-bf4e-8bfbae47231d.JPG)
 
+![edit confg](https://user-images.githubusercontent.com/79808404/204148274-9c67e3a6-7886-463c-a0d6-00b9d0561417.JPG)
 
 
+# Step 10
+ I initialized git repo in my Jenkins-Ansible server with the below command and created a new branch '_role-feature_' and switched to the branch
+      
+      git init
+      git pull https://github.com/lexjox777/ansible-config-mgt.git
+      git remote add origin https://github.com/lexjox777/ansible-config-mgt.git
+      git branch roles-feature
+      git switch roles-feature
+     
 
+![git init](https://user-images.githubusercontent.com/79808404/204148824-49423d8f-5b9c-4745-843b-6b375cc413d6.JPG)
 
+![git add](https://user-images.githubusercontent.com/79808404/204148828-5f2e2dda-1941-45ba-ad78-e2bbb79736ab.JPG)
 
+![git switch branch](https://user-images.githubusercontent.com/79808404/204148831-0a70e015-ecba-4514-8e23-818b77ddc507.JPG)
+
+I created a pull request and merged to main branch on github.
+  
+      git checkout main
+      git merge roles-feature
+    
+![git merge role feature](https://user-images.githubusercontent.com/79808404/204148841-77d5b71c-0895-4d44-be77-b9728728e1bd.JPG)
 
 
 
