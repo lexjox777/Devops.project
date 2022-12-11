@@ -213,6 +213,11 @@ I created a pull request and merged to main branch on github.
 
 I updated my static assignment folder with a **loadbalancer** file and configured as shown below
 
+    - hosts: lb
+      roles:
+        - { role: nginx, when: enable_nginx_lb and load_balancer_is_required }
+        - { role: apache, when: enable_apache_lb and load_balancer_is_required }
+
 ![loadbalncer file](https://user-images.githubusercontent.com/79808404/206932684-0b753a17-52ab-4058-bab2-83578b0c8520.JPG)
 
 
@@ -223,6 +228,11 @@ I updated my static assignment folder with a **db.yml** file and configured as s
 
 
 I updated my playbooks folder--site.yml file with the configuration below
+
+     - name: Loadbalancers assignment
+       hosts: lb
+         - import_playbook: ../static-assignments/loadbalancers.yml
+        when: load_balancer_is_required 
 
 ![update site yml](https://user-images.githubusercontent.com/79808404/206933097-bd7615f6-c63c-4562-a7e2-1162aad215c2.JPG)
 
@@ -236,7 +246,7 @@ I updated my uat.yml file in env-vars folder with the below script
   
 I ran my ansible-playbook with the below commmand to confirm if the configuration works as expected
   
-   ansible-playbook -i inventory/uat.yml playbooks/site.yml
+    ansible-playbook -i inventory/uat.yml playbooks/site.yml
    
   
   
