@@ -184,7 +184,7 @@ I created a pull request and merged to main branch on github.
 ![renamed the roles](https://user-images.githubusercontent.com/79808404/205451494-4b34c0b2-64fa-4bd5-9cc5-f4e08dd0c71b.JPG)
 
 
-### Step 12
+### Step 12  Congifuring Nginx and Apache role
  I uncommented and editted my configuration file in the **Nginx--default--main.yml** and editted it as shown in the picture below
 
 ![uncomment nginx](https://user-images.githubusercontent.com/79808404/205451760-4792498e-6f6d-43cc-b4c0-4ec25f5ad6fa.JPG)
@@ -199,6 +199,62 @@ I created a pull request and merged to main branch on github.
 ![edit nginx 2](https://user-images.githubusercontent.com/79808404/205452086-04950213-972c-44dc-8751-771eaec6bec8.JPG)
 
 ![nginx eddit task](https://user-images.githubusercontent.com/79808404/205452399-0df353ca-b7a8-4ed3-a469-1dbafb3fcb4c.JPG)
+
+![nginx update 1](https://user-images.githubusercontent.com/79808404/206932300-54381517-2f56-46f0-a226-2be450f9e3f0.JPG)
+
+
+![update nginx 2](https://user-images.githubusercontent.com/79808404/206932303-18d47d14-7593-4311-a55c-b03f6c233e76.JPG)
+  
+  
+  I editted my Aoache Role configuration file in the **Apache--default--main.yml** as shown in the picture.
+  
+
+![update apache 1](https://user-images.githubusercontent.com/79808404/206932478-5e4f9d3e-95f4-4cba-bb5a-484e7fe6c895.JPG)
+
+I updated my static assignment folder with a **loadbalancer** file and configured as shown below
+
+![loadbalncer file](https://user-images.githubusercontent.com/79808404/206932684-0b753a17-52ab-4058-bab2-83578b0c8520.JPG)
+
+
+I updated my static assignment folder with a **db.yml** file and configured as shown below
+ 
+  
+![db file update](https://user-images.githubusercontent.com/79808404/206932793-26cde623-57bd-404c-99a2-47a72044f7d9.JPG)
+
+
+I updated my playbooks folder--site.yml file with the configuration below
+
+![update site yml](https://user-images.githubusercontent.com/79808404/206933097-bd7615f6-c63c-4562-a7e2-1162aad215c2.JPG)
+
+
+I updated my uat.yml file in env-vars folder with the below script
+
+ ![update uat file](https://user-images.githubusercontent.com/79808404/206933278-a79e96d2-cecf-4a72-b1b2-72071ae961d4.JPG)
+
+
+## Step 13
+  
+I ran my ansible-playbook with the below commmand to confirm if the configuration works as expected
+  
+   ansible-playbook -i inventory/uat.yml playbooks/site.yml
+   
+  
+  
+![final a](https://user-images.githubusercontent.com/79808404/206933675-bbd48218-1959-463f-9d91-f03bf5cbd7f8.JPG)
+
+![final b](https://user-images.githubusercontent.com/79808404/206933694-3088c1fb-bc4e-4b4d-9b81-f22809eea1e3.JPG)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
