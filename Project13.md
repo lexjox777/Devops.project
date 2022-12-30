@@ -1,4 +1,5 @@
 # Introducing Ansible Dynamic Assignments (Include) and Community Roles into my Structure
+  ## (Using Ansible configuration management tool to prepare UAT environment for Tooling web solution)
 
 ### Step 1
   I created a new folder in my _ansible-config-mgt_ and named it **dynamic-assignments** .Then i created **env-vars.yml** file within the folder.
@@ -258,7 +259,46 @@ I ran my ansible-playbook with the below commmand to confirm if the configuratio
 
 
 
+## Challenges encountered when implementing the project
 
+  ### I got the below blocker when I ran my ansible-playbook
+    
+        ansible-playbook -i inventory/uat.yml playbooks/site.yml
+        
+  ### Error : 
+       
+       role 'mysql' was not found in /home/ubuntu/Project-13/playbooks/../static-assignments/roles:/home/ubuntu/ansible-config-artifact/roles:/home/ubuntu/Project-13/playbooks/../static-assignments
+
+
+
+ ![error](https://user-images.githubusercontent.com/79808404/210052684-2c14d358-e55a-42cc-bb3a-6da8227b23ba.JPG)
+
+
+### Solution: 
+   After troubleshooting and searching the net for a similar blocker , I finally got a hint from a mentor to include the path in my ansible.cfg role path configuration.
+   
+     sudo vi /etc/ansible/ansible.cfg
+  
+then I uncomment and included the role path to the folder
+           
+     roles_path = /home/ubuntu/Project-13/roles
+       
+                &
+                
+     inventory = /home/ubuntu/Project-13/inventory
+  
+     
+ ![solu 0](https://user-images.githubusercontent.com/79808404/210054883-af501bfa-efb7-476e-bb35-1a200b678781.JPG)
+
+
+
+ ![solu 1](https://user-images.githubusercontent.com/79808404/210054894-8daf35df-ef47-48bb-8eaa-1a43e0bc3543.JPG)
+
+
+![solu 2](https://user-images.githubusercontent.com/79808404/210054904-24bca525-f393-4903-817a-ad256e7a557d.JPG)
+
+
+   
 
 
 
