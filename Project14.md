@@ -143,7 +143,8 @@ I created and switched to a new branch 'feature/jenkinspipeline-stages' on my gi
   ![2  feature branch](https://user-images.githubusercontent.com/79808404/210628715-ca8e2ae5-f1a8-426a-a220-bb1ce5244179.JPG)
 
   
-  
+  ![13  build new stages](https://user-images.githubusercontent.com/79808404/210629851-b13616e8-29fd-4aa1-9d88-f52d63a36a47.JPG)
+
   
   
   
