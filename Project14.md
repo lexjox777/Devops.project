@@ -74,9 +74,92 @@
  
  ![10 build now 2](https://user-images.githubusercontent.com/79808404/210587400-c6dbda5a-3388-4b22-9f09-e7ab1f627cfb.JPG)
 
+### Step 7
+I created and switched to a new branch 'feature/jenkinspipeline-stages' on my github 
+ 
+ ![git branch](https://user-images.githubusercontent.com/79808404/210625046-4f55beb8-4552-4eb4-b923-bac5d42cb63a.JPG)
+
+### Step 8
+ I added more stages in my jenkinsfile by inputing the below code snippet and pushed the changes to the new feature/jenkinspipeline-stages
+  
+  
+ 
+           pipeline {
+               agent any
+
+             stages {
+               stage('Build') {
+                 steps {
+                   script {
+                     sh 'echo "Building Stage"'
+                   }
+                 }
+               }
+
+               stage('Package') {
+                 steps {
+                   script {
+                     sh 'echo "Packaging Stage"'
+                   }
+                 }
+               }
+
+               stage('Deploy') {
+                 steps {
+                   script {
+                     sh 'echo "Deploying Stage"'
+                   }
+                 }
+               }
+               stage('Clean up') {
+                 steps {
+                   script {
+                     sh 'echo "Cleaning Up Stage"'
+                   }
+                 }
+               }
+               stage('Test') {
+                steps {
+                  script {
+                    sh 'echo "Testing Stage"'
+                  }
+                }
+              }
+              }
+            }
 
 
+### Step 9
+  I navigated to the scan repository button in my jenkins console to see the new branch created in my jenkins console
+    
+  ![1  feature](https://user-images.githubusercontent.com/79808404/210627490-c5b10b43-cb08-42ed-9277-c299d424d43e.JPG)
 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
  
  
  
