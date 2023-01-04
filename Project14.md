@@ -129,13 +129,19 @@ I created and switched to a new branch 'feature/jenkinspipeline-stages' on my gi
             }
 
 
+![11  jenkinsfile update](https://user-images.githubusercontent.com/79808404/210628767-c6a464ed-3808-4791-8cc3-a90e8886dfcc.JPG)
+
+
 ### Step 9
   I navigated to the scan repository button in my jenkins console to see the new branch created in my jenkins console
     
   ![1  feature](https://user-images.githubusercontent.com/79808404/210627490-c5b10b43-cb08-42ed-9277-c299d424d43e.JPG)
 
   
+ ### then i clicked on the build now button to create the pipeline
   
+  ![2  feature branch](https://user-images.githubusercontent.com/79808404/210628715-ca8e2ae5-f1a8-426a-a220-bb1ce5244179.JPG)
+
   
   
   
