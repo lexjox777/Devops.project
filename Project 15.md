@@ -255,11 +255,35 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 
 ![28  created 3 red hat instances](https://user-images.githubusercontent.com/79808404/233380323-e34036ee-90ea-448e-b575-12c8c9543e8a.JPG)
 
+ ###_Bastion configuration_
+ 
+    yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm 
+    yum install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm 
+    yum install wget vim python3 telnet htop git mysql net-tools chrony -y 
+    systemctl start chronyd 
+    systemctl enable chronyd
+
+
 ![29  config bastion](https://user-images.githubusercontent.com/79808404/233380400-b7e5767c-f183-4ac4-8cc9-57c27a2316b7.JPG)
 
 ![29b  config bastion (python install)](https://user-images.githubusercontent.com/79808404/233380433-3b07b6d7-45e2-4a24-8cd2-f6cabb79abbd.JPG)
 
 ![29c  config bastion](https://user-images.githubusercontent.com/79808404/233380449-fff3dc89-df20-4039-9ff3-1035b1c0f4f0.JPG)
+
+
+###_Nginx configuration_
+
+    yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+    yum install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+
+    yum install wget vim python3 telnet htop git mysql net-tools chrony -y
+
+    systemctl start chronyd
+
+    systemctl enable chronyd
+
+
 
 ![30  config nginx ami](https://user-images.githubusercontent.com/79808404/233380477-7432f7fc-9613-4730-b64d-1f5707530bb4.JPG)
 
@@ -268,6 +292,20 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 ![30c config nginx ami(start and enable)](https://user-images.githubusercontent.com/79808404/233380531-0a76adfe-9d8d-46d1-b743-d44f29347f0a.JPG)
 
 ![30d  config nginx ami (set policies)](https://user-images.githubusercontent.com/79808404/233380581-d0590331-a35a-4123-bece-4f36a561ec33.JPG)
+
+###_EFS Utils_
+
+    git clone https://github.com/aws/efs-utils
+
+    cd efs-utils
+
+    yum install -y make
+
+    yum install -y rpm-build
+
+    make rpm 
+
+    yum install -y  ./build/amazon-efs-utils*rpm
 
 ![31  install amazon efs utils](https://user-images.githubusercontent.com/79808404/233380613-a31a1ed0-a996-400b-ba03-c526e440108f.JPG)
 
