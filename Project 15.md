@@ -251,28 +251,58 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 ![27e](https://user-images.githubusercontent.com/79808404/233369342-eeb5516a-f070-4efb-ac30-61ec4fd5fe01.JPG)
 
 
+### Step 15. I created and configured Three Redhat instances(Bastion, Nginx and Webserver) in my VPC.
+
+![28  created 3 red hat instances](https://user-images.githubusercontent.com/79808404/233380323-e34036ee-90ea-448e-b575-12c8c9543e8a.JPG)
+
+![29  config bastion](https://user-images.githubusercontent.com/79808404/233380400-b7e5767c-f183-4ac4-8cc9-57c27a2316b7.JPG)
+
+![29b  config bastion (python install)](https://user-images.githubusercontent.com/79808404/233380433-3b07b6d7-45e2-4a24-8cd2-f6cabb79abbd.JPG)
+
+![29c  config bastion](https://user-images.githubusercontent.com/79808404/233380449-fff3dc89-df20-4039-9ff3-1035b1c0f4f0.JPG)
+
+![30  config nginx ami](https://user-images.githubusercontent.com/79808404/233380477-7432f7fc-9613-4730-b64d-1f5707530bb4.JPG)
+
+![30b  config nginx ami (python install)](https://user-images.githubusercontent.com/79808404/233380504-3e677bd3-d2b1-4cbe-9333-ea55cda52927.JPG)
+
+![30c config nginx ami(start and enable)](https://user-images.githubusercontent.com/79808404/233380531-0a76adfe-9d8d-46d1-b743-d44f29347f0a.JPG)
+
+![30d  config nginx ami (set policies)](https://user-images.githubusercontent.com/79808404/233380581-d0590331-a35a-4123-bece-4f36a561ec33.JPG)
+
+![31  install amazon efs utils](https://user-images.githubusercontent.com/79808404/233380613-a31a1ed0-a996-400b-ba03-c526e440108f.JPG)
+
+![32  install self signed cert](https://user-images.githubusercontent.com/79808404/233380656-9b59b417-1f45-4e4a-bdd3-bb1e47963b1d.JPG)
 
 
+![32b  install self signed cert](https://user-images.githubusercontent.com/79808404/233380689-fe1d8479-b96a-4a75-9275-d1d85d29f9a1.JPG)
 
 
+![32c  install self signed cert](https://user-images.githubusercontent.com/79808404/233380736-018ffb89-6852-43c9-9097-74e7a0de724c.JPG)
+
+![33  config webserver ami](https://user-images.githubusercontent.com/79808404/233380776-0f3f8679-5780-4d01-9039-c685f54ac410.JPG)
 
 
+![33b  config webserver ami](https://user-images.githubusercontent.com/79808404/233380809-edeb62f9-5b03-43cd-9e75-5b5aa57cc6b1.JPG)
 
 
+![33c  config webserver ami (enable and start )](https://user-images.githubusercontent.com/79808404/233380880-55f6ccc5-ceb4-4e3c-81b7-46c0158dc523.JPG)
 
 
+![34  config webserver( selinux policies)](https://user-images.githubusercontent.com/79808404/233380917-d96d5f99-1989-4938-8270-75a6d75f6c3e.JPG)
 
 
+![35  config webserver (install amazon efs utils)](https://user-images.githubusercontent.com/79808404/233380939-d002fd95-0b94-4858-8a3a-df8db94d83b9.JPG)
 
-
-
+![36  install self signed cert for apache webserver](https://user-images.githubusercontent.com/79808404/233380971-b86bc33b-a571-4231-a26c-e395e289f063.JPG)
 
  
+ ![36b  install self signed cert](https://user-images.githubusercontent.com/79808404/233381044-11e88aaf-2c91-48af-be66-0460d6ff7f80.JPG)
+
  
- 
- 
- 
- 
+ ![36c  edit localhost to acs crt](https://user-images.githubusercontent.com/79808404/233381081-f6787561-8589-49e1-88f2-9aaf9ec5223f.JPG)
+
+ ![36c](https://user-images.githubusercontent.com/79808404/233381119-d411767c-6b00-4c98-8946-fa39f1c8bb72.JPG)
+
  
  
  
