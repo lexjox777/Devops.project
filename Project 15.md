@@ -18,7 +18,7 @@ with route53 users can  register domain names, manage DNS records, and route tra
 _ALB : Application load balancer helps to distribute incoming traffic accross multiple targets such as Elastic compute cloud(EC2) instances,containers and IP addresses_
 
 
-_Internet gateway IGW : securely and efficiently connects the internet external network to the resources located in the virtual private cloud _
+_Internet gateway IGW : securely and efficiently connects the internet external network to the resources located in the virtual private cloud_
 
 
 
