@@ -411,14 +411,32 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 
 ![42  target group for tooling](https://user-images.githubusercontent.com/79808404/233402317-3756fbe0-b77d-4e7c-bff9-c1d8dc37fae7.JPG)
 
+### I Created int and ext Loadbalancer to control traffic in my VPC
 
 
+![43 creating loadbalancer](https://user-images.githubusercontent.com/79808404/233407324-93f484cc-eea4-4711-b06e-db26e3b1c9db.JPG)
 
+![43b](https://user-images.githubusercontent.com/79808404/233407350-b24c4f81-e588-4ae6-9e32-d6bf344f3812.JPG)
 
+![43c](https://user-images.githubusercontent.com/79808404/233407387-b66d19ee-3c84-49c4-a793-3271d35251df.JPG)
 
+![43d](https://user-images.githubusercontent.com/79808404/233407451-6e2ed7b9-4de8-4cc3-8fd1-ed03580c7df6.JPG)
 
+![43e](https://user-images.githubusercontent.com/79808404/233407719-e554e2fe-ec20-496e-8a65-47678af1b52a.JPG)
 
+![43f](https://user-images.githubusercontent.com/79808404/233407794-1e36deab-f40f-4e3b-8829-6bd380455ef2.JPG)
 
+![44a  creating int loadbalancer](https://user-images.githubusercontent.com/79808404/233407847-53d85766-d584-4db2-81a0-ebcc6451c8c5.JPG)
+
+![44b](https://user-images.githubusercontent.com/79808404/233407902-b02a76b8-4a61-457c-b214-9077f289b66f.JPG)
+
+![44c](https://user-images.githubusercontent.com/79808404/233407945-5fddf40c-a6f3-4db7-bd02-aacfa3a4eadd.JPG)
+
+![44d](https://user-images.githubusercontent.com/79808404/233407975-dc68a84e-506c-4596-90f4-b50fd5264b31.JPG)
+
+![45  edit rules in int ALB](https://user-images.githubusercontent.com/79808404/233408033-01bd0159-95fa-499e-aa8c-2f50c90d0e04.JPG)
+
+![45b](https://user-images.githubusercontent.com/79808404/233408061-29b0cc44-88d7-4a58-8ca3-004cd5fcacd5.JPG)
 
 
  
