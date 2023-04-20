@@ -513,6 +513,70 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 
 
 
+![51  autoscaling](https://user-images.githubusercontent.com/79808404/233427059-19cde87e-3320-4fdc-9f0b-f890340e8390.JPG)
+
+![51b  autscaling for bastion](https://user-images.githubusercontent.com/79808404/233427143-6ffd8a72-2625-40fc-a8c2-b0ba0dcb7b0b.JPG)
+
+![51ba](https://user-images.githubusercontent.com/79808404/233427145-c068caf7-6429-4164-b17b-383fade38f5f.JPG)
+
+![51bb](https://user-images.githubusercontent.com/79808404/233427148-b609bfda-6998-4da9-a9eb-f7eca4f9be3e.JPG)
+
+![51bc](https://user-images.githubusercontent.com/79808404/233427152-9d453017-fc07-479d-bdce-1c02028f633c.JPG)
+
+![51bd](https://user-images.githubusercontent.com/79808404/233427156-2a49dadc-ec1c-40b5-8e94-bf49091e1031.JPG)
+
+![52  create autoscaling for nginx](https://user-images.githubusercontent.com/79808404/233427158-10f2fb0a-1862-4a82-8ebd-168162fa7ef5.JPG)
+
+![52b](https://user-images.githubusercontent.com/79808404/233427163-f8cbfaa1-eb42-4446-812d-02302e8bee1c.JPG)
+
+![52c](https://user-images.githubusercontent.com/79808404/233427165-197a5c27-a77a-40c8-8390-6f11662455a2.JPG)
+
+![52d](https://user-images.githubusercontent.com/79808404/233427166-2d935009-0a06-4089-921a-922e8f19b9c0.JPG)
+
+![53  autoscaling runing and ssh with bastion ip](https://user-images.githubusercontent.com/79808404/233427168-0a88eeab-85ba-4d14-b5ab-46e809505207.JPG)
+
+![53b](https://user-images.githubusercontent.com/79808404/233427169-65672f77-0a23-45e0-aac5-63de94c0727d.JPG)
+
+![54  using RDS endpoint to access to mysql](https://user-images.githubusercontent.com/79808404/233427171-9914fbb6-5c43-4b67-86cd-04146f2ba110.JPG)
+
+![54b](https://user-images.githubusercontent.com/79808404/233427176-60fc6ee8-609a-4751-aa03-976889669a22.JPG)
+
+![54c create databases](https://user-images.githubusercontent.com/79808404/233427178-fc8472ae-5473-4ee2-a4b4-5d188121cbc8.JPG)
+
+![55  creating launch template for wordpress](https://user-images.githubusercontent.com/79808404/233427181-ef4c9b21-daf6-4ad4-8ef6-eea0ec2a64f4.JPG)
+
+![55b](https://user-images.githubusercontent.com/79808404/233427184-cef3780b-99a5-4aef-9e5f-6a972fc4dba5.JPG)
+
+![55c](https://user-images.githubusercontent.com/79808404/233427188-7c365029-f9ed-484e-9cff-7882eecd53be.JPG)
+
+![55d](https://user-images.githubusercontent.com/79808404/233427190-12f961a6-cbea-4e16-94c7-7fbea3d0c6d0.JPG)
+
+![55e](https://user-images.githubusercontent.com/79808404/233427192-59c23abd-71b4-4b5a-af07-4511b8c0c69d.JPG)
+
+![56  create launch template for tooling](https://user-images.githubusercontent.com/79808404/233427196-9afc6f45-bab6-4992-add1-053e91057954.JPG)
+
+![56b](https://user-images.githubusercontent.com/79808404/233427199-4240aeed-3398-45e6-af77-b936a94bf22a.JPG)
+
+![56c](https://user-images.githubusercontent.com/79808404/233427204-a14887e6-dd94-42fd-87c9-fcde55a16018.JPG)
+
+![56d](https://user-images.githubusercontent.com/79808404/233427207-4510dba6-b04a-4ec8-b73b-6c1632bc9f9f.JPG)
+
+![57 created record  for tooling in Route53](https://user-images.githubusercontent.com/79808404/233427210-bd0d4974-1ff8-46d8-aac9-d6c5c0c53a13.JPG)
+
+![57b created record](https://user-images.githubusercontent.com/79808404/233427211-f118489d-7f9c-4404-8632-7ab543e5ab93.JPG)
+
+![57c](https://user-images.githubusercontent.com/79808404/233427130-7d8b0fa3-b6da-4f04-ad3e-89098b99fc01.JPG)
+
+![57d](https://user-images.githubusercontent.com/79808404/233427134-18b9181d-2c8c-4ad8-b16d-fd7e726ae310.JPG)
+
+![58  healthstatus for wordpress](https://user-images.githubusercontent.com/79808404/233427137-8ec6aae9-d1e2-4e1c-a81f-961e56be9f62.JPG)
+
+![59 healthstatus for tooling](https://user-images.githubusercontent.com/79808404/233427139-ce2b0378-2e1c-40aa-9a8f-5e883811d885.JPG)
+
+![60 halthstatus for nginx](https://user-images.githubusercontent.com/79808404/233427140-868ab6be-e4f6-4d20-939a-4d9f6d2b3701.JPG)
+
+
+
 
 
 
