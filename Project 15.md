@@ -411,7 +411,7 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 
 ![42  target group for tooling](https://user-images.githubusercontent.com/79808404/233402317-3756fbe0-b77d-4e7c-bff9-c1d8dc37fae7.JPG)
 
-### I Created int and ext Loadbalancer to control traffic in my VPC
+### Step 18. I Created int and ext Loadbalancer to control traffic in my VPC
 
 
 ![43 creating loadbalancer](https://user-images.githubusercontent.com/79808404/233407324-93f484cc-eea4-4711-b06e-db26e3b1c9db.JPG)
@@ -437,6 +437,99 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 ![45  edit rules in int ALB](https://user-images.githubusercontent.com/79808404/233408033-01bd0159-95fa-499e-aa8c-2f50c90d0e04.JPG)
 
 ![45b](https://user-images.githubusercontent.com/79808404/233408061-29b0cc44-88d7-4a58-8ca3-004cd5fcacd5.JPG)
+
+
+### Step 19. I created Launch Template for all my resources(Bastion, Webserver, Nginx, tooling)
+
+### _Create Launch Template For Bastion_
+![46 launch template](https://user-images.githubusercontent.com/79808404/233422415-59d0f452-ba01-49cf-b750-7ef12bc3516e.JPG)
+
+  ![46b  creating launch template for bastion](https://user-images.githubusercontent.com/79808404/233422447-e2eef3d7-a446-408f-a32b-b0437d775578.JPG)
+
+![46c](https://user-images.githubusercontent.com/79808404/233422468-ef869c95-cac2-402e-bf36-d031a739b78b.JPG)
+
+![46d](https://user-images.githubusercontent.com/79808404/233422543-0455bce3-afef-4923-8619-c2df5aee1f1d.JPG)
+
+
+![46e](https://user-images.githubusercontent.com/79808404/233422576-53ac9e55-8901-4f28-ad60-ee47f343ceca.JPG)
+
+### _Create Launch Template For Nginx_
+![47  creating lauch template for nginx](https://user-images.githubusercontent.com/79808404/233422613-37d4ce55-7594-4860-868c-7555ee602764.JPG)
+
+![47b](https://user-images.githubusercontent.com/79808404/233422630-28181445-ee53-4dbb-a70c-f4a176daf941.JPG)
+
+![47c](https://user-images.githubusercontent.com/79808404/233422658-afea8919-306e-4131-8622-a1eb0e0a5923.JPG)
+
+![47d](https://user-images.githubusercontent.com/79808404/233422685-3399317f-096f-4b48-a23b-8c9a4a7467bd.JPG)
+
+
+![48  copied int ALB dns](https://user-images.githubusercontent.com/79808404/233422857-4bef4283-c097-4bb2-8cbc-e80be7fb02fa.JPG)
+
+
+### _Create Launch Template For Wordpress_
+![49  create launch template for wordpress](https://user-images.githubusercontent.com/79808404/233422884-4d79d458-181c-43fc-91cf-1749c6bcdd77.JPG)
+
+![49b  copied the wordpress mount point in EFS](https://user-images.githubusercontent.com/79808404/233423625-3c6ea0d5-91d1-42f4-8758-ecc737440782.JPG)
+
+![49c  click attach to copy the mount point](https://user-images.githubusercontent.com/79808404/233423650-20d53d94-0616-4f1b-8a9c-40183e087e86.JPG)
+
+![49d  copy mount point](https://user-images.githubusercontent.com/79808404/233423700-48b6bd48-9115-4f03-a7eb-9a774d649bba.JPG)
+
+
+![49e  mounted the efs accesspoint](https://user-images.githubusercontent.com/79808404/233423737-11486b2c-a3e4-485c-83e2-456c7c052992.JPG)
+
+![49f  copied my database endpoint](https://user-images.githubusercontent.com/79808404/233423768-a5314e1a-8fec-4f88-ae7d-ee72c4f3b297.JPG)
+
+![49ff](https://user-images.githubusercontent.com/79808404/233423945-e5c4da98-22ae-4cb8-871b-ec819d8adabb.JPG)
+
+![49fff](https://user-images.githubusercontent.com/79808404/233423948-224e6eaf-7de6-49aa-9a93-cea31ba45ab8.JPG)
+
+### _Create Launch Template For Wordpress_
+![49ffff  create launch template for wordpress](https://user-images.githubusercontent.com/79808404/233423952-a9133e3b-c8c3-44b9-a458-f36d63503488.JPG)
+
+![49ffff](https://user-images.githubusercontent.com/79808404/233423957-dd0f041f-dc4b-43ca-9f3f-e51c07f67a73.JPG)
+
+![49fffff](https://user-images.githubusercontent.com/79808404/233423962-2f027757-b98c-4b7d-984b-f716a792132e.JPG)
+
+![49fffff](https://user-images.githubusercontent.com/79808404/233423963-dee9f67d-8cca-4187-b1d8-ddc204610366.JPG)
+
+
+### _Launch Template For Tooling_
+![50  create launch template for tooling](https://user-images.githubusercontent.com/79808404/233423969-6dd3daa1-d9b7-44da-9251-faa4dd41d1f6.JPG)
+
+![50a](https://user-images.githubusercontent.com/79808404/233423971-6f8fe827-1a49-45c4-8d7d-c665c9482506.JPG)
+
+![50b](https://user-images.githubusercontent.com/79808404/233423974-673b3cfd-910f-46a0-a4e5-7baa03512402.JPG)
+
+![50c  copying mount point for tooling](https://user-images.githubusercontent.com/79808404/233423975-2f256f54-6eb4-4b18-93e4-d112d5a517a0.JPG)
+
+![50cc](https://user-images.githubusercontent.com/79808404/233423938-7a976968-ead8-4da4-bbf1-aff8a0d713aa.JPG)
+
+![50ccc](https://user-images.githubusercontent.com/79808404/233423942-37687454-9dfa-4fa5-886e-d2435f5e5f6f.JPG)
+
+![50cccc](https://user-images.githubusercontent.com/79808404/233424525-67b3bb3b-c2b4-48ae-aae2-445679791b57.JPG)
+
+![50ccccc](https://user-images.githubusercontent.com/79808404/233424531-06fb20e1-d1e1-4899-8ff9-1071c8a41924.JPG)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  
