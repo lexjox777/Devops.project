@@ -208,10 +208,53 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 ![23c  create access point](https://user-images.githubusercontent.com/79808404/233355701-89c2c164-c1b9-45c1-be4c-e1df1ae2fa77.JPG)
 
 
-
 ![24  create access point for tooling](https://user-images.githubusercontent.com/79808404/233355724-11839a5a-8aa2-4e70-905c-678858c1c243.JPG)
 
 ![24b create access point for tooling](https://user-images.githubusercontent.com/79808404/233355775-b6977b49-82d4-476e-acc3-6cda16b805a2.JPG)
+
+
+### Step 13. I created and configured a Key Management Service (KMS) to encrypt my data to ensure it cannot be accessed by unauthorised user. this improves data security, meet compliance requirements, secure data transfer and provide access control for my data.
+
+ ![25  create key management service](https://user-images.githubusercontent.com/79808404/233365502-cb0a682d-0972-493a-9d0f-45822939a368.JPG)
+
+![25a  KMS configuration](https://user-images.githubusercontent.com/79808404/233365545-21b91679-8276-467a-a94f-9c5a37003942.JPG)
+
+![25b](https://user-images.githubusercontent.com/79808404/233365697-4f4b4436-b1ff-4497-8b5c-afd1d4f051b8.JPG)
+
+![25c](https://user-images.githubusercontent.com/79808404/233365724-86c5788c-653a-41b3-90b0-2d44e61e46fd.JPG)
+
+
+
+### Step 14. I created Relational Database Service(RDS) subnet group to specify the subnets in which my database instance can be launched.
+
+
+![26  to create RDS subnet groups](https://user-images.githubusercontent.com/79808404/233368593-50a65544-5e29-4bc8-830a-08f46412a6c9.JPG)
+
+
+
+![26b  creating rds subnet group](https://user-images.githubusercontent.com/79808404/233368614-adb53421-6b24-47ae-b276-42c1df1f18c4.JPG)
+
+### Created a database for my infrastructure.
+
+![27  creating database](https://user-images.githubusercontent.com/79808404/233369098-cda8a1ea-3996-4b55-986d-1b89a7d3b860.JPG)
+
+
+![27b](https://user-images.githubusercontent.com/79808404/233369161-09e97df8-70e7-4e12-8d99-09505a967236.JPG)
+
+
+![27c](https://user-images.githubusercontent.com/79808404/233369195-a52fc52b-07cc-4b79-82d6-e687ed68ad41.JPG)
+
+
+![27d](https://user-images.githubusercontent.com/79808404/233369313-5eed29c1-d47d-43ff-88f1-c750c394fa1e.JPG)
+
+
+![27e](https://user-images.githubusercontent.com/79808404/233369342-eeb5516a-f070-4efb-ac30-61ec4fd5fe01.JPG)
+
+
+
+
+
+
 
 
 
