@@ -255,7 +255,7 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 
 ![28  created 3 red hat instances](https://user-images.githubusercontent.com/79808404/233380323-e34036ee-90ea-448e-b575-12c8c9543e8a.JPG)
 
- ###_Bastion configuration_
+ ### _Bastion configuration_
  
     yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm 
     yum install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm 
@@ -271,7 +271,7 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 ![29c  config bastion](https://user-images.githubusercontent.com/79808404/233380449-fff3dc89-df20-4039-9ff3-1035b1c0f4f0.JPG)
 
 
-###_Nginx configuration_
+### _Nginx configuration_
 
     yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 
@@ -291,9 +291,19 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 
 ![30c config nginx ami(start and enable)](https://user-images.githubusercontent.com/79808404/233380531-0a76adfe-9d8d-46d1-b743-d44f29347f0a.JPG)
 
+   ### _Set policies for Nginx_
+     
+     setsebool -P httpd_can_network_connect=1
+     setsebool -P httpd_can_network_connect_db=1
+     setsebool -P httpd_execmem=1
+     setsebool -P httpd_use_nfs 1
+     
+     
 ![30d  config nginx ami (set policies)](https://user-images.githubusercontent.com/79808404/233380581-d0590331-a35a-4123-bece-4f36a561ec33.JPG)
 
-###_EFS Utils_
+
+
+### _EFS Utils_
 
     git clone https://github.com/aws/efs-utils
 
@@ -309,6 +319,17 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 
 ![31  install amazon efs utils](https://user-images.githubusercontent.com/79808404/233380613-a31a1ed0-a996-400b-ba03-c526e440108f.JPG)
 
+
+### _Installing self signed cert_
+
+     sudo mkdir /etc/ssl/private
+
+     sudo chmod 700 /etc/ssl/private
+
+     openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/ACS.key -out /etc/ssl/certs/ACS.crt
+
+     sudo openssl dhparam -out /etc/ssl/certs/dhparam.pem 2048
+
 ![32  install self signed cert](https://user-images.githubusercontent.com/79808404/233380656-9b59b417-1f45-4e4a-bdd3-bb1e47963b1d.JPG)
 
 
@@ -316,6 +337,20 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 
 
 ![32c  install self signed cert](https://user-images.githubusercontent.com/79808404/233380736-018ffb89-6852-43c9-9097-74e7a0de724c.JPG)
+
+
+# _Configuring webserver_
+
+    yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+    yum install -y dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+
+    yum install wget vim python3 telnet htop git mysql net-tools chrony -y
+
+    systemctl start chronyd
+
+    systemctl enable chronyd
+ 
 
 ![33  config webserver ami](https://user-images.githubusercontent.com/79808404/233380776-0f3f8679-5780-4d01-9039-c685f54ac410.JPG)
 
