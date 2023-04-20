@@ -178,6 +178,57 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 
 
 
+### Step 9. I requested for a certificate from ACM (Amazon Certificate Manager) to secure my website traffic and other network communications associated with my website.
+
+ 
+ ![21  aws certificate manager](https://user-images.githubusercontent.com/79808404/233345292-7310b0b0-9d8a-4eb1-9d80-62b28a9411bc.JPG)
+
+ ![21b  cert request](https://user-images.githubusercontent.com/79808404/233345328-c2e9c35b-0a9e-496a-aad7-de8fe6602f81.JPG)
+
+ ![21c create record in route 53](https://user-images.githubusercontent.com/79808404/233348938-5b99bba4-e327-441f-9e67-5b7e66c549ad.JPG)
+
+ 
+ ### Step 10. I created Elastics file system (EFS) to store and access files from multiple instances within my VPC.
+ 
+ ![22  create EFS](https://user-images.githubusercontent.com/79808404/233352192-cab9e80f-dbfa-4a94-8952-5c1e0f2576e1.JPG)
+
+ ![22b  create EFS](https://user-images.githubusercontent.com/79808404/233352224-a92fabaf-51f0-4af6-909d-6cac3db5c4d2.JPG)
+
+ ![22c  create EFS](https://user-images.githubusercontent.com/79808404/233352243-369f6444-9707-49f3-bd2a-76f3c30d1f28.JPG)
+
+
+### Step 12. In AWS Elastic File System(EFS) I created an access-point for both wordpress and tooling which will helps to improve security and access control for data stored in my EFS system.
+
+![23  to create access point](https://user-images.githubusercontent.com/79808404/233355661-546425f8-5e40-4c40-882c-436723b48dd2.JPG)
+
+
+![23b  creating access point for wordpress](https://user-images.githubusercontent.com/79808404/233355684-dc91c67b-b0e7-49fd-85af-f7921fdb8b28.JPG)
+
+
+![23c  create access point](https://user-images.githubusercontent.com/79808404/233355701-89c2c164-c1b9-45c1-be4c-e1df1ae2fa77.JPG)
+
+
+
+![24  create access point for tooling](https://user-images.githubusercontent.com/79808404/233355724-11839a5a-8aa2-4e70-905c-678858c1c243.JPG)
+
+![24b create access point for tooling](https://user-images.githubusercontent.com/79808404/233355775-b6977b49-82d4-476e-acc3-6cda16b805a2.JPG)
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
  
  
  
