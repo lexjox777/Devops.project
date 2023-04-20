@@ -53,15 +53,16 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
  
   ![2  Create VPC](https://user-images.githubusercontent.com/79808404/233317805-ba03acea-178a-4125-8f49-31e74f08f769.JPG)
 
- 
+
+
  ### Step 2. I edited my VPC to enable DNS hostname
- 
-  
  
  ![3 To enable DNS hostname](https://user-images.githubusercontent.com/79808404/233318605-daab9374-a132-4f96-8a1c-66a830cc7b43.JPG)
 
 
  ![3b](https://user-images.githubusercontent.com/79808404/233318640-f0fd2d61-f330-4477-849e-a717330a00ab.JPG)
+
+
 
  ### Step 3. I created an internet gateway and attached it to my VPC. This will allow and enable communucation between the resources within my VPC and the internent.
  
@@ -80,7 +81,8 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 ![5cc](https://user-images.githubusercontent.com/79808404/233319507-b5b1a0ab-2b5c-48aa-94be-1d4e1941470d.JPG)
 
 
-# Step 4. I created subnets (private and public subnets) This allows better organization and well management of my resouces, improved network security(by distinguishing between a public subnet such as webserver and a subnet that requires a private access like databases) and also improve network availabilty by spreading across multiple Availabilty Zones.
+
+### Step 4. I created subnets (private and public subnets) This allows better organization and well management of my resouces, improved network security(by distinguishing between a public subnet such as webserver and a subnet that requires a private access like databases) and also improve network availabilty by spreading across multiple Availabilty Zones.
 
 
 ![6  create subnets](https://user-images.githubusercontent.com/79808404/233322643-5f546a42-d1d3-494b-ac56-b1ecafc2c7b4.JPG)
@@ -101,7 +103,7 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 
 
 
-# Step 5. I created Route tables( Private and Public route tables) and associated it with my subnets
+### Step 5. I created Route tables( Private and Public route tables) and associated it with my subnets
 
   
 ![8  created route table](https://user-images.githubusercontent.com/79808404/233325533-d2c64df8-b500-4797-b9b4-21283dfdd67e.JPG)
@@ -124,19 +126,18 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 ![10b](https://user-images.githubusercontent.com/79808404/233326150-7c744274-5ed8-4dd3-9038-a6aff6963ce1.JPG)
 
 
-# Step 6. I edited the private and public route table to to target my IGW
 
+### Step 6. I edited the private and public route table to to target my IGW
 
 ![11  edit public rtb](https://user-images.githubusercontent.com/79808404/233328999-cf24012d-8ede-4859-ad9e-eb0d96d5dcc4.JPG)
 
 ![11b](https://user-images.githubusercontent.com/79808404/233329033-3422ad62-02ee-492f-9d39-967e7c91bf33.JPG)
 
 
-# Step 7. I created and allocated an Elastic IP for NAT Gateway within my VPC to allow instances in Private Subnets to access the internet without exposing their IP addresses and still keeping them protected from incoming traffic from the internet.
 
+### Step 7. I created and allocated an Elastic IP for NAT Gateway within my VPC to allow instances in Private Subnets to access the internet without exposing their IP addresses and still keeping them protected from incoming traffic from the internet.
 
 ![12  allocate elastic ip for NAT gateway](https://user-images.githubusercontent.com/79808404/233337956-221cb642-0b66-40ae-a5b2-181011cfbc90.JPG)
-
 
 ![12b](https://user-images.githubusercontent.com/79808404/233337993-f478e9a4-0bbd-4c55-aa62-39ec8e23cbaa.JPG)
 
@@ -144,24 +145,39 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 ![13  Create a NAT Gateway](https://user-images.githubusercontent.com/79808404/233338011-83f9b31d-7d1e-4159-a5d4-531c7ca4d401.JPG)
 
 
-
 ![13b](https://user-images.githubusercontent.com/79808404/233338080-7ad5e025-4dcd-45a4-8d71-9fc4dcc1a439.JPG)
 
 
+![14  Edit private rtb routes](https://user-images.githubusercontent.com/79808404/233339420-2e2d15b4-8817-4296-848f-d59704593196.JPG)
+
+
+![14b](https://user-images.githubusercontent.com/79808404/233339444-cd05568f-bc58-462d-aef0-089eb9904de2.JPG)
+
+
+### Step 8. I created security groups for all my resources to control inbound and outbound traffic to and from the resources within my VPC
+
+
+![15  create security group](https://user-images.githubusercontent.com/79808404/233341885-7ed0a742-259c-4582-bc0c-6b6537788be8.JPG)
+
+
+![15b](https://user-images.githubusercontent.com/79808404/233341909-bb15747b-2f35-487f-b19c-d5d2cddbbe7b.JPG)
+
+
+![16  create security group for bastion](https://user-images.githubusercontent.com/79808404/233341925-9f557e60-71cc-4fa0-812f-519eb7899075.JPG)
+
+![17  create security group for nginx](https://user-images.githubusercontent.com/79808404/233341997-ef8dcf59-c666-42be-a3ad-f27f0ffc6fc0.JPG)
+
+
+ ![17b  additional rule](https://user-images.githubusercontent.com/79808404/233342044-39ee3275-199a-418a-b399-acce13d1ae72.JPG)
+
+ ![18  create security group for int ALB](https://user-images.githubusercontent.com/79808404/233342068-3c0b80b2-02e3-4369-a579-a83e794f110d.JPG)
+
+ ![19  create security group for webservers](https://user-images.githubusercontent.com/79808404/233342091-0e11675c-ce2a-4bf2-84c1-5c8140281d77.JPG)
+
+ ![20  create security group for datalayers](https://user-images.githubusercontent.com/79808404/233342117-21d4c561-fdc9-4f15-907c-58b235503090.JPG)
 
 
 
-
-
-
-
-
-
-
- 
- 
- 
- 
  
  
  
