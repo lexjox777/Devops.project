@@ -339,7 +339,7 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 ![32c  install self signed cert](https://user-images.githubusercontent.com/79808404/233380736-018ffb89-6852-43c9-9097-74e7a0de724c.JPG)
 
 
-# _Configuring webserver_
+### _Configuring webserver_
 
     yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 
@@ -366,6 +366,16 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
 
 ![35  config webserver (install amazon efs utils)](https://user-images.githubusercontent.com/79808404/233380939-d002fd95-0b94-4858-8a3a-df8db94d83b9.JPG)
 
+
+### _Installing self signed cert for apache webserver_
+
+     yum install -y mod_ssl
+
+     openssl req -newkey rsa:2048 -nodes -keyout /etc/pki/tls/private/ACS.key -x509 -days 365 -out /etc/pki/tls/certs/ACS.crt
+
+     vi /etc/httpd/conf.d/ssl.conf
+     
+     
 ![36  install self signed cert for apache webserver](https://user-images.githubusercontent.com/79808404/233380971-b86bc33b-a571-4231-a26c-e395e289f063.JPG)
 
  
