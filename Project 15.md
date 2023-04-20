@@ -385,6 +385,46 @@ _Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully mana
  ![36c  edit localhost to acs crt](https://user-images.githubusercontent.com/79808404/233381081-f6787561-8589-49e1-88f2-9aaf9ec5223f.JPG)
 
  ![36c](https://user-images.githubusercontent.com/79808404/233381119-d411767c-6b00-4c98-8946-fa39f1c8bb72.JPG)
+ 
+ 
+ ### Step 16. I created _Amazon Machine Images (AMI)_ for my resources (Webserver, Bastion and Nginx)
+ 
+ ![37a  creating AMI for bastion](https://user-images.githubusercontent.com/79808404/233401995-07e9def6-f9e2-4c38-9168-ed320f9f4eff.JPG)
+
+
+![37b](https://user-images.githubusercontent.com/79808404/233402046-dbf53a3b-70e9-4e7f-8c68-629652251e43.JPG)
+
+
+![38  creating ami for webserver](https://user-images.githubusercontent.com/79808404/233402084-91d3499f-9d6d-4ce2-af2c-f7a160fd9aa9.JPG)
+
+
+![39  creating ami for nginx](https://user-images.githubusercontent.com/79808404/233402118-97d37de4-4078-4aa8-b96a-41378343d9fb.JPG)
+
+
+### Step 17. I created _Target Groups_ for my resources (Webserver, Bastion and Nginx)
+
+![40  creating target group](https://user-images.githubusercontent.com/79808404/233402152-3135f583-7890-4249-8e51-ce1dc6d58fdd.JPG)
+
+![40a  target group for nginx](https://user-images.githubusercontent.com/79808404/233402222-b1637ab5-d856-4cbf-8a74-4082c317f5c6.JPG)
+
+![41  target group for wordpress](https://user-images.githubusercontent.com/79808404/233402267-e98c7ab1-8b54-42a8-9261-e0df1a45da2c.JPG)
+
+![42  target group for tooling](https://user-images.githubusercontent.com/79808404/233402317-3756fbe0-b77d-4e7c-bff9-c1d8dc37fae7.JPG)
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
 
  
  
